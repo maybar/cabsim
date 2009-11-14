@@ -2,11 +2,8 @@
 
 = Introduction =
 
-Add your content here.
-
-[http://ww1.microchip.com/downloads/en/DeviceDoc/51526b.pdf PICDEM FS USB
-DEMONSTRATION BOARD
-USERS GUIDE]
+PICDEM FS USB DEMONSTRATION BOARD USERS GUIDE
+[http://ww1.microchip.com/downloads/en/DeviceDoc/51526b.pdf]
 
 = Details =
 
