@@ -8,3 +8,5 @@
 
 PICDEM FS USB DEMONSTRATION BOARD USERS GUIDE
 [http://ww1.microchip.com/downloads/en/DeviceDoc/51526b.pdf]
+
+[http://ww1.microchip.com/downloads/en/DeviceDoc/39632e.pdf PIC18F4550]
