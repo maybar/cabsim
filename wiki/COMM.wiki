@@ -20,11 +20,10 @@ Sólo se comprará la cara frontal del instrumento, el resto será de fabricaci�
 
 ==Conexión==
 *Salidas*.
-* Segmentos 7.
-* Punto decimal 1.
-* Seleccion de Display 16.
+  * Segmentos 7.
+  * Punto decimal 1.
+  * Seleccion de Display 16.
 
 *Entradas*.
-* Pulsadores 2.
-* Encoder 4.
-
+  * Pulsadores 2.
+  * Encoder 4.
