@@ -9,8 +9,8 @@ Sólo se comprará la cara frontal del instrumento, el resto será de fabricaci�
 
 = Detalles =
 
-*Costo del instrumento*
-||Descripción||Cantidad||Euros||
+==Costo del instrumento==
+||*Descripción*||*Cantidad*||*Euros*||
 ||Panel frontal||1||24||
 ||Soporte Display||2||10||
 ||Encoder CTS288||1||3||
@@ -18,12 +18,12 @@ Sólo se comprará la cara frontal del instrumento, el resto será de fabricaci�
 ||Display||12||12||
 || ||Total||50||
 
-*Conexión*
-Salidas
-- Segmentos 7
-- Punto decimal 1
-- Seleccion de Display 16
+==Conexión==
+*Salidas*.
+- Segmentos 7.
+- Punto decimal 1.
+- Seleccion de Display 16.
 
-Entradas
-- Pulsadores 2
-- Encoder 4
+*Entradas*.
+- Pulsadores 2.
+- Encoder 4.
