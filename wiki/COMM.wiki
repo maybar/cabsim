@@ -1,6 +1,6 @@
 #summary Diseño del modulo de radio COMM.
 
-= Introduccón =
+= Introducción =
 
 Información del diseño y fabricación de módulo de comunicación Radio COMM.
 El costo del instrumento por OpenCockpits es 135 euros.
@@ -27,3 +27,6 @@ Sólo se comprará la cara frontal del instrumento, el resto será de fabricaci�
 *Entradas*.
   * Pulsadores 2.
   * Encoder 4.
+
+==Componentes==
+[http://www.datasheetcatalog.org/datasheet/SGSThomsonMicroelectronics/mXtyyvx.pdf ULN2003A] Seven Darlington Arrays
