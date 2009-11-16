@@ -30,3 +30,4 @@ Sólo se comprará la cara frontal del instrumento, el resto será de fabricaci�
 
 ==Componentes==
 [http://www.datasheetcatalog.org/datasheet/SGSThomsonMicroelectronics/mXtyyvx.pdf ULN2003A] Seven Darlington Arrays
+[http://www.andare-ing.com/uploads/digit_HDSP_7403.pdf Display 7 segmentos]
