@@ -10,4 +10,4 @@
 
 [http://ww1.microchip.com/downloads/en/DeviceDoc/39632e.pdf PIC18F4550]
 
-[http://www.datasheetcatalog.org/datasheet2/f/0xttc6fdp7u4112xjaali7u697py.pdf 74HC154]
+[http://www.datasheetcatalog.org/datasheet2/f/0xttc6fdp7u4112xjaali7u697py.pdf 74HC154] Decodificador 4 a 16 lineas.
