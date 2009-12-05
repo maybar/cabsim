@@ -14,3 +14,5 @@
 
 [http://users.rowan.edu/~everett/courses/soclii/Timer%20Circuit%20Spec%20Sheets/DECODER.pdf MC14543B]
 BCD-to-Seven Segment Latch/Decoder/Driver for Liquid Crystals
+
+[http://www.airborn.com.au/layout/232to485.html Esquematico conversor rs232 a rs485]
