@@ -1,0 +1,8 @@
+== Home page ==   
+ 
+http://ardupilot.googlecode.com/svn/images/08785-06-L.jpg   
+
+*Introduction* 
+   
+This is the Ardupilot Manual. Just follow the navigation links in the sidebar at left. As with all wikis, it's always a work in progress, and is constantly improving. If you have any comments you can make them at the bottom of each page. 
+    
