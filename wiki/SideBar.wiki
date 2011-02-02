@@ -1,5 +1,5 @@
 #summary Navigation sidebar.
-   
+   {{{
 == !ArduPilot Instructions ==
 
 * [ArduPilot Home]   
@@ -14,3 +14,5 @@
 * [LoadingPage Loading the code]  
 * ----   
 * *Optional Features*  
+
+}}}
