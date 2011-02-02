@@ -1,0 +1,16 @@
+#summary Navigation sidebar.
+   
+== !ArduPilot Instructions ==
+
+* [ArduPilot Home]   
+* [IntroductionPage Introduction]   
+* [GettingStarted Getting Started]   
+* [HardWare Setting up the hardware]    
+ * [SolderingBoard Soldering the board]    
+ * [AirFrame Setting up your airframe]    
+ * [TelemetryPage (Optional) Telemetry]    
+ * [Ch4 (Optional) Reading and writing to Channel 4]    
+ * [Upgrading If you're upgrading to 2.5 or above from a previous version of the code]   
+* [LoadingPage Loading the code]  
+* ----   
+* *Optional Features*  
