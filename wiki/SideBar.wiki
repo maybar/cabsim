@@ -1,7 +1,7 @@
 #summary Navigation sidebar.
-   {{{
-== !ArduPilot Instructions ==
-
+   
+== !Cabsim Instructions ==
+{{{
 * [ArduPilot Home]   
 * [IntroductionPage Introduction]   
 * [GettingStarted Getting Started]   
