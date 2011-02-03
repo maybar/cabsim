@@ -1,8 +1,8 @@
 #summary Navigation sidebar.
    
 == !Cabsim Instructions ==
-{{{
-* [ArduPilot Home]   
+
+* [cabsim Home]   
 * [IntroductionPage Introduction]   
 * [GettingStarted Getting Started]   
 * [HardWare Setting up the hardware]    
@@ -14,5 +14,3 @@
 * [LoadingPage Loading the code]  
 * ----   
 * *Optional Features*  
-
-}}}
