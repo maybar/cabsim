@@ -1,7 +1,7 @@
 == Home page ==  
 
 {{{ 
-http://ardupilot.googlecode.com/svn/images/08785-06-L.jpg   
+http://   
 }}}
 
 *Introducción* 
