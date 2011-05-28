@@ -1,0 +1,16 @@
+#summary Distribución de requisitos.
+
+= Introducción =
+
+Esta página contiene la distribución de requisitos por cada subsistema del proyecto
+
+
+= Subsistemas =
+
+El proyecto cabsim está formado por los siguientes subsistemas:
+  * Mueble
+  * Panel
+  * Aplicaciones
+  * Electrónica de control
+  * Bus de comunicaciones.
+
