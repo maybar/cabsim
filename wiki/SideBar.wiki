@@ -2,6 +2,8 @@
 
 == FASE 1 ==
  * [Requisitos Requisitos]
+== FASE 2 ==
+ * [MDRPage Distribución de Requisitos]
 == Instrucciones Cabsim ==
 
  * [cabsim Inicio]
