@@ -1,11 +1,20 @@
 #summary Requisitos.
 #labels Phase-Requirements
 
-= Introduction =
+= Introducción =
 
 Esta página contiene los requisitos del proyecto.
 Los requisitos deberán estar identificador por un código único.
-E lt ipo de objeto puede ser requisito (Req) o informativo (Inf)
+El tipo de objeto puede ser requisito (Req) o informativo (Inf)
 
-= Details =
+= Detalles =
+A continuación la relación de  requisitos de el proyecto.
+==Generales==
 ||Código||Tipo||Descripción||
+||0001||Inf|| ||
+==Funcionalidad==
+||Código||Tipo||Descripción||
+
+==Seguridad==
+||Código||Tipo||Descripción||
+
