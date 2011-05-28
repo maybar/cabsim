@@ -17,10 +17,9 @@ A continuación la relación de  requisitos de el proyecto.
 
 ==Funcionalidad==
 ||Código||Tipo||Descripción||
-||0010||Req||El simulador deberá será conectado a un ordenador donde se ejecutará el motor de simulación. ||
-||0020||Req||El panel deberá mostrar la información de cabina y deberá coincidir con los datos del motor de simulación del FS2004. ||
-||0030||Req||El accionamiento sobre los controles del panel, deberá actuar sobre el motor de simulación del FS2004. ||
-||0040||Req||La velocidad de mínima de refresco del panel deberá ser de 500 ms. ||
+||0010||Req||El panel y el motor de simulación deberá disponer de las características necesarias correspondientes para la simulación de un avión Cessna 182S. ||
+||0020||Req||El simulador deberá será ser conectado a un ordenador donde se ejecutará el motor de simulación. ||
+||0030||Req||El panel deberá mostrar la información de cabina y deberá coincidir con los datos del motor de simulación del FS2004. ||
+||0040||Req||El accionamiento sobre los controles del panel, deberá actuar sobre el motor de simulación del FS2004. ||
+||0050||Req||La velocidad de mínima de refresco del panel deberá ser de 500 ms. ||
 
-==Seguridad==
-||Código||Tipo||Descripción||
