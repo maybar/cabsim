@@ -9,15 +9,18 @@ El tipo de objeto puede ser requisito (Req) o informativo (Inf)
 
 = Detalles =
 A continuación la relación de  requisitos de el proyecto.
+
 ==Generales==
 ||Código||Tipo||Descripción||
 ||0001||Req||El simulador debe estar compuesto por un panel, un mueble para el ordenador y un asiento. ||
 ||0002||Req||Se deberá usar como motor de simulación el MS Flight Simulator 2004 (FS2004). ||
+
 ==Funcionalidad==
 ||Código||Tipo||Descripción||
 ||0010||Req||El simulador deberá será conectado a un ordenador donde se ejecutará el motor de simulación. ||
 ||0020||Req||El panel deberá mostrar la información de cabina y deberá coincidir con los datos del motor de simulación del FS2004. ||
 ||0030||Req||El accionamiento sobre los controles del panel, deberá actuar sobre el motor de simulación del FS2004. ||
 ||0040||Req||La velocidad de mínima de refresco del panel deberá ser de 500 ms. ||
+
 ==Seguridad==
 ||Código||Tipo||Descripción||
