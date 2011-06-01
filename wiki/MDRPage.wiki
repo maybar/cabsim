@@ -14,3 +14,12 @@ El proyecto cabsim está formado por los siguientes subsistemas:
   * Electrónica de control
   * Bus de comunicaciones.
 
+== Requisitos Aplicaciones ==
+||Código||Tipo||Descripción||
+|| ||Req||La aplicación en el PC se realizará usando Visual Studio C++.||
+|| ||Req||Para la comunicación con el motor de simulación se usará la dll fsuipc||
+|| ||Req||Se usarán las recomendaciones de programación misra c y misrac++||
+
+
+== Requisitos Panel ==
+||Código||Tipo||Descripción||
