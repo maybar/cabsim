@@ -1,9 +1,15 @@
 #summary Navigation sidebar.
 
+== FASE 0 ==
+
 == FASE 1 ==
  * [Requisitos Requisitos]
 == FASE 2 ==
  * [MDRPage Distribución de Requisitos]
+== FASE 3 : Arquitectura ==
+
+== FASE 4 : Diseño ==
+
 == Instrucciones Cabsim ==
 
  * [cabsim Inicio]
