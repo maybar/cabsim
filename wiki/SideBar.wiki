@@ -1,6 +1,7 @@
 #summary Navigation sidebar.
 
 == FASE 0 ==
+ * [cabsim Inicio]
 
 == FASE 1 ==
  * [Requisitos Requisitos]
@@ -12,7 +13,6 @@
 
 == Instrucciones Cabsim ==
 
- * [cabsim Inicio]
  * [IntroductionPage Introducción] 
  * [GettingStarted Empezando]   
  * [HardWare Configurando el hardware]    
