@@ -11,6 +11,9 @@
 
 == FASE 4 : Diseño ==
 
+== Fotos ==
+=== Radio de comunicaciones ===
+
 == Instrucciones Cabsim ==
 
  * [IntroductionPage Introducción] 
