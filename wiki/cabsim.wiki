@@ -1,3 +1,4 @@
+#summary Página principal.
 == Home page ==  
 
 {{{ 
