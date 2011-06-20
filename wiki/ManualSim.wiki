@@ -1,0 +1,23 @@
+#summary Manuel del simulador.
+
+= Introducción =
+
+Esta paágina describe la secuencia de pasos para operar con la cabina CabSim.
+
+
+= Detalles =
+
+#Arranque de TeamSpeak
+El TeamSpeak es el programa cliente que permite comunicar con otros pilotos o con los controladores de vuelo.
+* Doble click en el icóno del TeamSpeak.
+* Conectar en la red AirHispania.
+Por defecto la tecla _F12_ permite activar el canal de comunicación.
+Cuando la cabina está alimentada, el boton rojo den el lado derecho los mandos del simulador, es usado como boton PTT (Push To Talk).
+
+#Alimentar la cabina.
+
+#Arranque del simulador.
+#Seleccionar vuelo.
+#Lanzar el plugin Sim 2004plugim.
+#Copilot FSInn.
+#Arrancar FSPassenger.
