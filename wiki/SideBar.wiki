@@ -18,8 +18,8 @@
 
  * [IntroductionPage Introducción] 
  * [GettingStarted Empezando]   
- * [HardWare Configurando el hardware]    
- * [SolderingBoard Soldando la placa]    
+ * [ManualSim Manual del Simulador]    
+ * [ManualCessna Manual de vuelo]    
   
  * [LoadingPage Loading the code]  
  * ----   
