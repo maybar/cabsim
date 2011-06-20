@@ -1,0 +1,13 @@
+#summary Lista de variables FSUIPC.
+
+= Introducción =
+
+Este documento presenta la lista de las variables FSUIPC que estan vinculadas con el proyecto CabSim.
+
+
+= Detalles =
+
+A continuación se presenta la información de las varibles FSUIPC vinculadas al panel de la cabina.
+ * Offset: es el código FSUIPC de la variable.
+
+||Offset||
