@@ -1,15 +1,24 @@
 #summary Navigation sidebar.
 
-== FASE 0 ==
+== FASE 1: CONCEPTO Y PLANIFICACIÓN ==
  * [cabsim Inicio]
 
-== FASE 1 ==
+== FASE 2: ANÁLISIS DE RIESGOS Y REQUISITOS DEL SISTEMA ==
  * [Requisitos Requisitos]
-== FASE 2 ==
  * [MDRPage Distribución de Requisitos]
-== FASE 3 : Arquitectura ==
+ 
+== FASE 3 : ARQUITECTURA Y DISTRIBUCIÓN DE REQUISITOS DEL SISTEM ==
 
-== FASE 4 : Diseño ==
+== FASE 4 : DISEÑO==
+
+== FASE 5: FABRICACIÓN	==
+== FASE 6: PRUEBAS UNITARIAS ==
+== FASE 7: INSTALACIÓN/PRUEBAS DE INTEGRACIÓN ==
+== FASE 8: PRUEBAS DE SISTEMA Y VALIDACIÓN ==
+== FASE 9: ACEPTACIÓN DEL PRODUCTO ==
+== FASE 10: OPERACION Y MANTENIMIENTO ==
+== REFERENCIAS ==
+
 
 == Fotos ==
 === Radio de comunicaciones ===
