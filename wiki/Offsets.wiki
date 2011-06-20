@@ -10,4 +10,14 @@ Este documento presenta la lista de las variables FSUIPC que estan vinculadas co
 A continuación se presenta la información de las varibles FSUIPC vinculadas al panel de la cabina.
  * Offset: es el código FSUIPC de la variable.
 
-||Offset||
+||Offset||Nombre||Descripción||
+||3104||FuelPump||Interruptor de bomba de combustible||
+||029C||PitotHead||Interruptor del calentador del tubo pitot||
+||0B18||VAC||Indicador de vacío||
+||0D0C||Luces||Luces:STRB,BCN,NAV,PANEL,TAXI,LDG||
+||282C||AMP||Carga de batería||
+||3586||Starter M1||Arrancador del motor 1||
+||3576||Starter M2||Arrancador del motor 2||
+||3101||Master ALT||Interruptor principal del alternador||
+||3102||Master BAT||Interruptor principal de batería||
+||3103||Master AV||Interruptor principal de aviónica||
