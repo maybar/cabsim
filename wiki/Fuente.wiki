@@ -9,7 +9,6 @@ Información de la fuente de alimentación de la cabina.
 
 Modelo: LPK9-4P 300W
 
-||Color||Corriente||Voltaje||
 ||Naranja||18A||3.3V||
 ||Rojo||20A||5V||
 ||Blanco||0.5A||-5v||
