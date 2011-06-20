@@ -31,7 +31,7 @@ A continuación se presenta la información de las varibles FSUIPC vinculadas al
 ||08BE||EGT||Indicador de temperatura de salida de gases||||||
 ||08C0||Mainfold Pressure||Presion en el sistema de inducción||||||
 ||08E8||CHT||Temperatura en la admisión||||||
-||0918||Flujo de combustible  PPH||||||
+||0918||Flujo de combustible  PPH|| || ||||
 ||2400||Prop1 RPM||Indicador de RPM de la helice 1||||||
 ||0B80||Fuel left Main Capacity||Capacidad del tanque de combustible izquierdo||||||
 ||0B98||Fuel right Main Capacity||Capacidad del tanque de combustible derecho||||||
@@ -44,4 +44,3 @@ A continuación se presenta la información de las varibles FSUIPC vinculadas al
 ||0AF8||Fuel tank select||Selector de tanque de combustible||||0:OFF/1:BOTH/2:LEFT/3:RIGHT||
 ||0E8C||OAT||Indicador de temperatura de aire exterior||||||
 ||341D||BELT||Interruptor de señal de cinturon de seguridad||3:OFF/3:ON||||||
-
