@@ -10,14 +10,22 @@ Este documento presenta la lista de las variables FSUIPC que estan vinculadas co
 A continuación se presenta la información de las varibles FSUIPC vinculadas al panel de la cabina.
  * Offset: es el código FSUIPC de la variable.
 
-||Offset||Nombre||Descripción||
-||3104||FuelPump||Interruptor de bomba de combustible||
-||029C||PitotHead||Interruptor del calentador del tubo pitot||
-||0B18||VAC||Indicador de vacío||
-||0D0C||Luces||Luces:STRB,BCN,NAV,PANEL,TAXI,LDG||
-||282C||AMP||Carga de batería||
-||3586||Starter M1||Arrancador del motor 1||
-||3576||Starter M2||Arrancador del motor 2||
-||3101||Master ALT||Interruptor principal del alternador||
-||3102||Master BAT||Interruptor principal de batería||
-||3103||Master AV||Interruptor principal de aviónica||
+||*Offset*||*Nombre*||*Descripción*||Tipo||Valores||
+||3104||FuelPump||Interruptor de bomba de combustible||8bit||0/1||
+||029C||PitotHead||Interruptor del calentador del tubo pitot||16bit||0/1||
+||0B18||VAC||Indicador de vacío||float64|| ||
+||0D0C||Luces||Luces:STRB,BCN,NAV,PANEL,TAXI,LDG||16bit|| ||
+||282C||AMP||Carga de batería||float64||  ||
+||3586||Starter M1||Arrancador del motor 1||||||
+||3576||Starter M2||Arrancador del motor 2||||||
+||3101||Master ALT||Interruptor principal del alternador||||||
+||3102||Master BAT||Interruptor principal de batería||||||
+||3103||Master AV||Interruptor principal de aviónica||||||
+||0BC8||Brake parking||Freno de aparcamiento||||0:OFF 32767:ON||
+||0BE4||Flaps right||Indicador de flaps derecho||||0:UP 5461:10º 10922:20º 16383:FULL||
+||0BE0||Flaps left||Indicador de flaps izquierdo||||0:UP 5461:10º 10922:20º 16383:FULL||
+||08A0||Fuel Flow||Flujo de combustible PPH SSL||||||
+||08B8||OilTemp||Indicador de Temperatura de aceite||||||
+||08BA||Oil Pressure||Indicador de presión de aceite||||||
+||08BE||EGT||Indicador de temperatura de salida de gases||||||
+||
