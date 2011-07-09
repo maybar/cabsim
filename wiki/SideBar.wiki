@@ -20,6 +20,7 @@
 
 == FASE 4 ==
 *DISEÑO*
+ * Esquemáticos
 
 == FASE 5	==
 *FABRICACIÓN*
