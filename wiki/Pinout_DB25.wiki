@@ -43,4 +43,4 @@ La direccion de los pines es referido al lado del PC.
  * U1: 74HC154 - Decodificador para seleccionar los 8 latches (U2-U9)
  * U2: 74HC259 - Latch para controlar el driver 74HC541 (U10).
  * U3-U9:74HC259 - Lathes para controlar 7 grupos de 8 salidas digitales.
- * U10: 74HC541 - Decodificador para generar 8 lineas de COMMOM para la entradas digitales.
+ * U10: 74HC541 - Driver tri estado para generar 8 lineas de COMMOM para la entradas digitales.
