@@ -23,3 +23,7 @@ A continuación la relación de  requisitos de el proyecto.
 ||0040||Req||El accionamiento sobre los controles del panel, deberá actuar sobre el motor de simulación del FS2004. ||
 ||0050||Req||La velocidad de mínima de refresco del panel deberá ser de 500 ms. ||
 
+==Instrumentos==
+||Código||Tipo||Descripción||
+||0100||Req||Luces indicadoras de balizas OMI||
+||0110||Req||
