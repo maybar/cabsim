@@ -56,6 +56,7 @@ Ubicación: Menú inicio.
 FsInn es el programa que permite la coneción a la red de vuelo virtual.
 Procedimiento:
  * En el menú Modules del FS9 cargar el modulo Copilot.
+ * Sincronizar el tiempo del simulador usando la opción "TimeSync".
  * Cuando cargue el panel de control, el icono FsInn estará de color amarillo. Pulsar el ícono para iniciar una sesion multijugador. El ícono debe ponerse de color verde.
  * Pulsar en el ícono de AirHispania para conectarse a la red de AirHispania. Cuando la conexión esté realizada, el icono de AirHispania se pondrá de color verde.
  * Selecionar en el mnú de Copilot la herramienta de sincronización de hora, para syncronizar la hora del simulador con la hora del ordenador.
