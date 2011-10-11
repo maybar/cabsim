@@ -9,6 +9,7 @@
 *DISEÑO*
 
 * [Pinout_DB25 Diagrama de pines de IoCard Master]
+* [Schematics Esquemáticos]
 
 
 
