@@ -44,3 +44,4 @@ A continuación se presenta la información de las varibles FSUIPC vinculadas al
 ||0AF8||Fuel tank select||Selector de tanque de combustible||||0:OFF/1:BOTH/2:LEFT/3:RIGHT||
 ||0E8C||OAT||Indicador de temperatura de aire exterior||||||
 ||341D||BELT||Interruptor de señal de cinturon de seguridad||3:OFF/3:ON||||||
+||0892||START||Engine 1 Starter switch position (Magnetos),||0=Off, 1=right, 2=Left, 3=Both, 4=Start||||||
