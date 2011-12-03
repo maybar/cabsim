@@ -27,3 +27,12 @@ A continuación la relación de  requisitos de el proyecto.
 ||Código||Tipo||Descripción||
 ||0100||Req||Luces indicadoras de balizas OMI||
 ||0110||Req||
+
+
+==Interruptores del panel==
+===Magnetos de arranque de motor (4 posiciones)===
+Debe ser una perilla giratoria de 4 posiciones marcadas como: OFF, R, L, BOTH. En la parte superior de R,L y BOTH debe presentarse el texto MAGNETOS.
+En la parte derecha del selector debe haber un pulsador de encendido de color rojo, cuyo texto sea: START.
+===Interruptores de batería ==
+Dos interruptores de color rojo. En la parte inferior indicar ALT y BAT. En la parte superior lateral el texto ON. En la parte superior el texto MASTER.
+===Interruptor principal de aviónica===
