@@ -36,3 +36,11 @@ En la parte derecha del selector debe haber un pulsador de encendido de color ro
 ===Interruptores de batería ==
 Dos interruptores de color rojo. En la parte inferior indicar ALT y BAT. En la parte superior lateral el texto ON. En la parte superior el texto MASTER.
 ===Interruptor principal de aviónica===
+===Fuel boost pump switches===
+===Light switches : BCN, LAND, TAXI, NAV, STROBE===
+===Pitot heat switch===
+===Pitch / Trim wheel with status indicator FNDs.===
+===3 Axis lever : Throttle, Fuel mixture, Propeller pitch===
+===Flap lever===
+===Fuel tank selector===
+===Landing gear switch with position indicator lights.===
