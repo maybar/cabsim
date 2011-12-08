@@ -44,3 +44,20 @@ Dos interruptores de color rojo. En la parte inferior indicar ALT y BAT. En la p
 ===Flap lever===
 ===Fuel tank selector===
 ===Landing gear switch with position indicator lights.===
+
+==GAUGES ON THE PANEL==
+
+SPEED indicator
+ATTITUDE indicator with position bar setting rotary knob
+ALTIMETER with BARO setting rotary knob
+TURN COORDINATOR
+HEADING indicator with heading bug and gyro rotary knob
+VERTICAL SPEED indicator
+VOR1 indicator with OBS rotary knob
+VOR2 indicator with OBS rotary knob
+ADF indicator with HDG rotary knob
+FUEL gauge
+Manifold pressure gauge
+TACHOMETER
+CLOCK
+GPS with push buttons and rotary knob (GPS500 model)
