@@ -15,7 +15,8 @@
 
 
 
-=== PCIs ===
-  *2 PCI
-  *1 PCI-E x1
-  *1 PCI-E x16
+=== Slots ===
+  * PCI1(32bits): vacío
+  * PCI2(32bits): Tarjeta Wifi
+  * PCIE1(x16): Vacío
+  * PCIE2(x1): Tarjeta gráfica
