@@ -3,7 +3,7 @@
 
 = Detalles =
 === Placa madre ===
-  * Tipo de CPU||                                       DualCore AMD Athlon II X2 4400e, 2700 MHz (13.5 x 200)
+  * Tipo de CPU                                       DualCore AMD Athlon II X2 4400e, 2700 MHz (13.5 x 200)
   * Nombre del motherboard                            ASRock N68C-S UCC  (2 PCI, 1 PCI-E x1, 1 PCI-E x16, 2 DDR2 DIMM, 2 DDR3 DIMM, Audio, Video, LAN)
   * Chipset del motherboard                           nVIDIA nForce 7025-630a, AMD K10
   * Memoria del sistema                               3584 MB  (DDR3-1333 DDR3 SDRAM)
