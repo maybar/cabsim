@@ -44,7 +44,7 @@ Caracteristicas configuradas en los vuelos del simulador:
  * La meterologia esta configurada para refrescarse cada 15 minutos.
  * La vista en la pantalla de escenario (pantalla superior) es la vista de cabina.
 
-== Lanzar el plugin Sim 2004plugim ==
+== Lanzar el plugin Sim 2004plugin ==
 El plugin Sim2004 activa los intrumentos de Saitek: 
  * el Radio Panel (Ubicado en la parte Superior derecha del panel) 
  * el Multipanel (Ubicado en la parte Inferior derecha del panel).
