@@ -11,6 +11,7 @@
 == Información ==
  * Conexiones IoCard Master
    * [Pinout_DB25 Conector DB25]
+   * [Inputs Entradas digitales]
  * [Schematics Esquemáticos]
  * [Fuente Fuente de alimentación]
  * [Offsets Variables FSUIPC]
