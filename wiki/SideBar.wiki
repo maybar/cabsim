@@ -9,7 +9,8 @@
 *DISEÑO*
 
 == Información ==
- * [Pinout_DB25 Diagrama de pines de IoCard Master]
+ * [Conexiones IoCard Master]
+   * [Pinout_DB25 Conector DB25]
  * [Schematics Esquemáticos]
  * [Fuente Fuente de alimentación]
  * [Offsets Variables FSUIPC]
