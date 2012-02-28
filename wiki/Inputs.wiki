@@ -1,0 +1,13 @@
+#summary Conexiones de las entradas digitales.
+
+= Introducción =
+
+Se describen la conexiones del conector de entradas digitales () con los elementos del panel.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
