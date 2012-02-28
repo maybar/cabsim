@@ -9,7 +9,7 @@
 *DISEÑO*
 
 == Información ==
- * [Conexiones IoCard Master]
+ * Conexiones IoCard Master
    * [Pinout_DB25 Conector DB25]
  * [Schematics Esquemáticos]
  * [Fuente Fuente de alimentación]
