@@ -5,12 +5,9 @@
 Se describen la conexiones del conector de entradas digitales () con los elementos del panel.
 
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Conexiones del Conector J3=
+<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/4XkA_lYCfwPLOt0Mou_-0dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A27A/s800/ConectorJ3.jpg" height="60" width="640" /></a></td></tr></table>
 
 
-https://picasaweb.google.com/lh/photo/4XkA_lYCfwPLOt0Mou_-0SyUN_92GU5-wWcywUs1OZQ?feat=directlink
+= Conexiones del Conector J4=
+https://lh6.googleusercontent.com/-dG7eXLlYiC8/T01Zoenj1JI/AAAAAAAAAeQ/x98Xyv0yLWo/s800/ConectorJ4.jpg
