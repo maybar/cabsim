@@ -6,7 +6,22 @@ Se describen la conexiones del conector de entradas digitales () con los element
 
 
 = Conexiones del Conector J3=
-<table style="width:auto;"><tr><td><a href="https://picasaweb.google.com/lh/photo/4XkA_lYCfwPLOt0Mou_-0dMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img src="https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A27A/s800/ConectorJ3.jpg" height="60" width="640" /></a></td></tr></table>
+https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A27A/s800/ConectorJ3.jpg
+
+El cable cinta de este conector esta etiquetado como INPUT 1.
+En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
+||Pin||Entrada||Elemento||
+||1||001||Fuel Pump Sw||
+||2||002||STRB Sw||
+||3||004||BCN Sw||
+||4||003||NAV Sw||
+||5||008||---||
+||6||007||---||
+||7||000||PANEL SW||
+||8||006||---||
+||9||005||---||
+||10||GND|| ||
+
 
 
 = Conexiones del Conector J4=
