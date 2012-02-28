@@ -10,7 +10,7 @@ https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A2
 
 El cable cinta de este conector esta etiquetado como INPUT 1.
 En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
-||*Pin*||*Entrada*||*Elemento*||
+|| *Pin* || *Entrada* || *Elemento Panel* ||
 ||1||001||Fuel Pump Sw||
 ||2||002||STRB Sw||
 ||3||004||BCN Sw||
