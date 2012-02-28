@@ -20,7 +20,18 @@ En la tabla siguiente se muestran las conexiones de este conector con los elemen
 ||7||000||PANEL SW||
 ||8||006||---||
 ||9||005||---||
-||10||GND|| ||
+||10||GND1|| ||
+||Pin||Entrada||Elemento||
+||11||010||TAXI Sw||
+||12||011||LDG Sw||
+||13||013||PITOT HEAD Sw||
+||14||012||(free)||
+||15||017||---||
+||16||016||---||
+||17||009||TEST SW||
+||18||015||---||
+||19||014||---||
+||20||GND2|| ||
 
 
 
