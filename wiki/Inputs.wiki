@@ -52,6 +52,7 @@ En la tabla siguiente se muestran las conexiones de este conector con los elemen
 ||39||032||---||
 ||40||GND4|| ||
 
+Nota: Los pines cuyo elemento esta marcado --- no pueden ser usados, debido al cable paralelo usado para conectar la tarjeta IoCard y el ordenador.
 
 = Conexiones del Conector J4=
 https://lh6.googleusercontent.com/-dG7eXLlYiC8/T01Zoenj1JI/AAAAAAAAAeQ/x98Xyv0yLWo/s800/ConectorJ4.jpg
