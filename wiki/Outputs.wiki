@@ -1,0 +1,9 @@
+#summary Conexiones de las salidas digitales de la IoCard.
+
+= Introducción =
+
+Este página muestra las conexiones de las salidas digitales de la Master Card con los elementos del panel.
+
+
+= Conector J2=
+
