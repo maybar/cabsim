@@ -6,9 +6,8 @@
  * [MDRPage Distribución de Requisitos]
  
 
-*DISEÑO*
+=Diseño y fabricación=
 
-== Información ==
  * Conexiones IoCard Master
    * [Pinout_DB25 Conector DB25]
    * [Inputs Entradas digitales]
@@ -19,10 +18,11 @@
 
 
 
-== Fotos ==
-=== Radio de comunicaciones ===
+=Fotos=
 
-== Instrucciones Cabsim ==
+=Radio de comunicaciones=
+
+=Instrucciones Cabsim=
 
  * [IntroductionPage Introducción] 
  * [GettingStarted Empezando]   
