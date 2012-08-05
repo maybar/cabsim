@@ -3,6 +3,10 @@
 
 = Introducción =
 
-Esta página exlia como manejar la cbina de simulacon "CabSim182".
+Esta página explica como manejar la cabina de simulacon "CabSim182".
 
 = Detalles =
+
+= Cuadrante de gases =
+  * T5: Abrir incrementalmete los flaps de refrigeración.
+  * T6: Cerrar incrementalmete los flaps de refrigeración.
