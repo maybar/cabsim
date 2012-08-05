@@ -3,7 +3,7 @@
 
 = Introducción =
 
-Esta página explica como manejar la cabina de simulacon "CabSim182".
+Esta página explica como manejar la cabina de simulacon "CabSim".
 
 = Detalles =
 
