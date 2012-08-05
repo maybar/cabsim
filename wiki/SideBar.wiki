@@ -22,7 +22,7 @@
 
 =Radio de comunicaciones=
 
-=Instrucciones Cabsim=
+=Manual Cabsim=
 
  * [IntroductionPage Introducción] 
  * [GettingStarted Empezando]   
