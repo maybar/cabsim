@@ -25,10 +25,9 @@
 =Manual Cabsim=
 
  * [IntroductionPage Introducción] 
- * [GettingStarted Arrancando CabSim]   
+ * [ManualSim Arrancando CabSim]   
  * [ManualSim Manual del Simulador]    
  * [ManualCessna Manual de vuelo]    
   
- * [LoadingPage Loading the code]  
  * ----   
  * *Optional Features*  
