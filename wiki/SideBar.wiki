@@ -19,6 +19,6 @@
     * [ManualSim Manual del Simulador]  
       * [ManualSim#Cuadrante_de_gases Cuadrante de gases] 
     * [ManualCessna Manual de vuelo]    
-
-
-  * Radio de comunicaciones=
+  * Radio de comunicaciones
+  * Desarrollos Futuros
+    * [BusCard BusCard]
