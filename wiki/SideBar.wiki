@@ -1,39 +1,23 @@
 #summary Navigation sidebar.
 
- * IoCard Master
-   * [Pinout_DB25 Conector DB25]
-   * [Inputs Entradas digitales]
-   * [Outputs Salidas digitales]
+  * [cabsim Inicio]
 
- * [cabsim Inicio]
-
- * [Requisitos Requisitos]
- * [MDRPage Distribución de Requisitos]
- 
-
-=Diseño y fabricación=
-
- * IoCard Master
-   * [Pinout_DB25 Conector DB25]
-   * [Inputs Entradas digitales]
-   * [Outputs Salidas digitales]
- * [Schematics Esquemáticos]
- * [Fuente Fuente de alimentación]
- * [Offsets Variables FSUIPC]
+  * [Requisitos Requisitos]
+  * [MDRPage Distribución de Requisitos]
+  * Diseño y fabricación
+    * IoCard Master
+      * [Pinout_DB25 Conector DB25]
+      * [Inputs Entradas digitales]
+      * [Outputs Salidas digitales]
+    * [Schematics Esquemáticos]
+    * [Fuente Fuente de alimentación]
+    * [Offsets Variables FSUIPC]
+  * Fotos
+  * Manual Cabsim
+    * [IntroductionPage Introducción] 
+    * [StartSim Arrancando CabSim]   
+    * [ManualSim Manual del Simulador]    
+    * [ManualCessna Manual de vuelo]    
 
 
-
-=Fotos=
-
-
-=Manual Cabsim=
-
- * [IntroductionPage Introducción] 
- * [StartSim Arrancando CabSim]   
- * [ManualSim Manual del Simulador]    
- * [ManualCessna Manual de vuelo]    
-  
- * ----   
- * *Optional Features*  
-
-=Radio de comunicaciones=
+  * Radio de comunicaciones=
