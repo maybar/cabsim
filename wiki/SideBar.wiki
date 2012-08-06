@@ -11,6 +11,7 @@
     * [Schematics Esquemáticos]
     * [Fuente Fuente de alimentación]
     * [Offsets Variables FSUIPC]
+    * [Ordenador Características del ordenador]
   * Fotos
   * Manual Cabsim
     * [IntroductionPage Introducción] 
