@@ -16,7 +16,7 @@
     * [IntroductionPage Introducción] 
     * [StartSim Arrancando CabSim]   
     * [ManualSim Manual del Simulador]  
-      * [ManualSim# Cuadrante de gases] 
+      * [ManualSim#Cuadrante de gases Cuadrante de gases] 
     * [ManualCessna Manual de vuelo]    
 
 
