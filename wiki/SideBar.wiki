@@ -1,5 +1,6 @@
 #summary Navigation sidebar.
 
+
  * [cabsim Inicio]
 
  * [Requisitos Requisitos]
@@ -8,7 +9,7 @@
 
 =Diseño y fabricación=
 
- * Conexiones IoCard Master
+ * [Conexiones IoCard Master]
    * [Pinout_DB25 Conector DB25]
    * [Inputs Entradas digitales]
    * [Outputs Salidas digitales]
