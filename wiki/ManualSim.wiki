@@ -3,7 +3,7 @@
 
 = Introducción =
 
-Esta página explica como manejar la cabina de simulacon "CabSim".
+Esta página explica como manejar la cabina de simulación "CabSim".
 
 <wiki:toc max_depth="1" />
 
