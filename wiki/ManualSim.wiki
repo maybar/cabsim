@@ -5,7 +5,7 @@
 
 Esta página explica como manejar la cabina de simulacon "CabSim".
 
-= Detalles =
+<wiki:toc max_depth="1" />
 
 = Cuadrante de gases =
   * T5: Abrir incrementalmete los flaps de refrigeración.
