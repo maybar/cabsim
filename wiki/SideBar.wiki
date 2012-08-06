@@ -1,5 +1,10 @@
 #summary Navigation sidebar.
 
+ * IoCard Master
+   * [Pinout_DB25 Conector DB25]
+   * [Inputs Entradas digitales]
+   * [Outputs Salidas digitales]
+
  * [cabsim Inicio]
 
  * [Requisitos Requisitos]
