@@ -1,7 +1,6 @@
 #summary Navigation sidebar.
 
   * [cabsim Inicio]
-
   * [Requisitos Requisitos]
   * [MDRPage Distribución de Requisitos]
   * Diseño y fabricación
