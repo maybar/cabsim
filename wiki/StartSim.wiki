@@ -27,7 +27,7 @@ Ubicación del programa: Escritorio.
 
 = Seleccionar vuelo =
 Se han guardado algunos vuelos con la configuración preparada para usar con la cabina del simulador.
-Los nombre de los archivos empiezan con Sim. Por ejemplo el archivo SimCessna182_Leso arranca el un vuelo con el avión Cessna 182 aparacado en la plataforma del Aeropuerto de Hondarribia (LESO). 
+Los nombre de los archivos empiezan con Sim. Por ejemplo el archivo SimCessna182_Leso arranca el un vuelo con el avión Cessna 182 aparcado en la plataforma del Aeropuerto de Hondarribia (LESO). 
 Caracteristicas configuradas en los vuelos del simulador:
  * Carga el avión y el escenario del aeródromo seleccionado.
  * Presenta la pantalla de intrumentos en el monitor de instrumentos (pantalla central) del panel.
@@ -36,8 +36,8 @@ Caracteristicas configuradas en los vuelos del simulador:
  * La meterologia esta configurada para refrescarse cada 15 minutos.
  * La vista en la pantalla de escenario (pantalla superior) es la vista de cabina.
 
-= Lanzar el plugin Sim 2004plugin =
-El plugin Sim2004 activa los intrumentos de Saitek: 
+= Lanzar el plugin *Sim 2004plugin* =
+El plugin Sim2004 activa los instrumentos de Saitek: 
  * el Radio Panel (Ubicado en la parte Superior derecha del panel) 
  * el Multipanel (Ubicado en la parte Inferior derecha del panel).
 Nota: Algunas veces el alto consumo de CPU del FS no permite que cargue el plugin. Es recomendable minimizar el FS9 antes de cargar el plugin.
