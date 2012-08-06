@@ -1,6 +1,5 @@
 #summary Navigation sidebar.
 
-
  * [cabsim Inicio]
 
  * [Requisitos Requisitos]
@@ -21,7 +20,6 @@
 
 =Fotos=
 
-=Radio de comunicaciones=
 
 =Manual Cabsim=
 
@@ -32,3 +30,5 @@
   
  * ----   
  * *Optional Features*  
+
+=Radio de comunicaciones=
