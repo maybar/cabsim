@@ -1,0 +1,23 @@
+#summary Diseño del bloque de cuadrante de gases.
+
+= Introducción =
+
+A continuación de describe el diseño y fabricación del bloque que incluye el cuadrante de gases del panel y los indicadores de posición de flaps.
+
+= Contenido =
+<wiki:toc max_depth="1" />
+
+
+= Ubicación =
+Este módulo está instalado en la parte inferior derecha del panel, debajo del módulo Multipanel de Saitek.
+Esta sujeto a la estructra del simulador mediante 5 tornillos.
+
+= Características =
+Este bloque contiene el cuadrante de palancas de control (gases, RPM y mezcla) y los indicadores luminosos de posición de flaps.
+
+= Cuadrante de gases =
+"CabSim" usa el equipo "Pro Flight Throttle Quadrant" de la empresa [http://www.saitek.com Saitek]. Este equipo tiene 3 palancas que serán usadas para controlar los gases, la RPM y la mezcla de combustible.
+Este cuadrante se conectará al Hub USB integrado del Sistema de mando(Saitek Pro Flight Yoke System).
+
+== Sujeción ==
+El cuadrante de saitke está sujeto a la placa de bloque completo, usando 4 tornillos.
