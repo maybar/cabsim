@@ -60,7 +60,7 @@ La conexión de los leds a la IO card es como sigue:
 == Programación ==
 El programa cabsim.ssi muestra el control de estas luces.
 
-=== Variables SIOC enlazadas a IOCARD y sin enlazar===
+=== Variables SIOC enlazadas a IOCARD y variables de trabajo===
 Las variables necesarias y son las siguientes:
   * Luz indicadora 10º verde
 {{{  
