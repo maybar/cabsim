@@ -19,5 +19,25 @@ Este bloque contiene el cuadrante de palancas de control (gases, RPM y mezcla) y
 "CabSim" usa el equipo "Pro Flight Throttle Quadrant" de la empresa [http://www.saitek.com Saitek]. Este equipo tiene 3 palancas que serán usadas para controlar los gases, la RPM y la mezcla de combustible.
 Este cuadrante se conectará al Hub USB integrado del Sistema de mando(Saitek Pro Flight Yoke System).
 
+Referirse al [http://code.google.com/p/cabsim/downloads/detail?name=Pro%20Flight%20Quadrant_QSG.pdf&can=2&q= Manual] del Quadrante de Saitek para mas información.
 == Sujeción ==
-El cuadrante de saitke está sujeto a la placa de bloque completo, usando 4 tornillos.
+El cuadrante de saitek está sujeto a la placa de bloque completo, usando 4 tornillos.
+
+== Conexión al FS ==
+Los pulsadores y ejes del cuadrante se asinarán al FS configurando directemte la Asignación de controles del menu de configuración de FS9.
+A continuación se describe la configuración usada:
+Pestaña: Botones y Teclas
+Tipo de joystick: Sitek Pro Flight Yoke
+  * Flaps de refrigeración (Apertura incremental): Botón 19
+  * Flaps de refrigeración (Cierre incremental): Botón 20
+
+== Serigrafía ==
+La plca de soporte del bloque del quadrante esta eqtiqeuteda con información de cada una de las 3 palancas:
+  * "THROT UP OPN" Para la palanca de la izquierda (Roja). 
+  * "PROP UP INCR RPM" Para la palanca central (Azul).
+  * "MIX UP LEAN" Para la palanca de la derecha (Roja)
+Estas letras son retroiluminadas.
+
+= Indicadores de Flaps =
+Se implmentará con 3 leds bicoles para indicar las posiciones de 10º, 20º y posición de FULL flaps.
+La lus roja se usará para indicar que los flaps se encuentran en movimiento, y la luz verde se usa para indicar la posición actual de los flaps. 
