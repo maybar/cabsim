@@ -24,12 +24,17 @@ Referirse al [http://code.google.com/p/cabsim/downloads/detail?name=Pro%20Flight
 El cuadrante de saitek está sujeto a la placa de bloque completo, usando 4 tornillos.
 
 == Conexión al FS ==
-Los pulsadores y ejes del cuadrante se asinarán al FS configurando directemte la Asignación de controles del menu de configuración de FS9.
+Los pulsadores y ejes del cuadrante se asinarán al Simulador configurando directemte la Asignación de controles del menu de configuración de FS9.
 A continuación se describe la configuración usada:
+Tipo de joystick: Saitek Pro Flight Yoke
 Pestaña: Botones y Teclas
-Tipo de joystick: Sitek Pro Flight Yoke
   * Flaps de refrigeración (Apertura incremental): Botón 19
   * Flaps de refrigeración (Cierre incremental): Botón 20
+
+Pestaña: Eje del Joystick
+  * Eje de la hélice: Rotación X
+  * Eje de la mezcla: Rotación Y
+  * Eje del acelerador: Eje Z
 
 == Serigrafía ==
 La plca de soporte del bloque del quadrante esta eqtiqeuteda con información de cada una de las 3 palancas:
@@ -41,3 +46,61 @@ Estas letras son retroiluminadas.
 = Indicadores de Flaps =
 Se implmentará con 3 leds bicoles para indicar las posiciones de 10º, 20º y posición de FULL flaps.
 La lus roja se usará para indicar que los flaps se encuentran en movimiento, y la luz verde se usa para indicar la posición actual de los flaps. 
+== Conexión al FS ==
+La conexión se realizará usando el protocolo SIO y la tarjeta IO Master Card.
+La conexión de los leds a la IO card es como sigue:
+  * Output 20     Luz indicadora 10º verde
+  * Output 18     Luz indicadora 20º verde
+  * Output 16     Luz indicadora FULL verde
+  * Output 19     Luz indicadora 10º roja
+  * Output 17     Luz indicadora 20º rojo
+  * Output 15     Luz indicadora FULL roja
+
+
+== Programación ==
+El programa cabsim.ssi muestra el control de estas luces.
+Las variables necesarias y son las siguientes:
+  * Luz indicadora 10º verde
+{{{  
+Var 0703, name LED_FLAPS_10G, Link IOCARD_OUT, Output 20
+}}}
+  * Luz indicadora 20º verde
+{{{
+Var 0704, name LED_FLAPS_20G, Link IOCARD_OUT, Output 18    
+}}}
+  * Luz indicadora FULL verde
+{{{
+Var 0705, name LED_F_FULL_G, Link IOCARD_OUT, Output 16     
+}}}
+  * Luz indicadora 10º roja
+{{{
+Var 0706, name LED_FLAPS_10R, Link IOCARD_OUT, Output 19
+}}}
+  * Luz indicadora 20º rojo
+{{{
+Var 0707, name LED_FLAPS_20R, Link IOCARD_OUT, Output 17       
+}}}
+  * Luz indicadora FULL roja
+{{{
+Var 0708, name LED_FLAPS_F_R, Link IOCARD_OUT, Output 15     
+}}}
+  * Guarda la ultima posición
+{{{
+Var 1000, name VAR_OLD_FLAP, Value 0     
+}}}
+  * Sentido en el que se mueven los flaps
+{{{
+Var 1001, name VAR_DIR_FLAPS, Value 0     
+}}}
+  * Posición de flaps 10º
+{{{
+Var 1002, name VAR_POS_FLA_10, Value 0     
+}}}
+  * Posición flaps 20º
+{{{
+Var 1003, name VAR_POS_FLA_20, Value 0     
+}}}
+  * Posición flaps full
+{{{
+Var 1004, name VAR_POS_FLA_FU, Value 0    
+}}}
