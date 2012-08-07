@@ -59,6 +59,8 @@ La conexión de los leds a la IO card es como sigue:
 
 == Programación ==
 El programa cabsim.ssi muestra el control de estas luces.
+
+=== Variables SIOC enlazadas a IOCARD y sin enlazar===
 Las variables necesarias y son las siguientes:
   * Luz indicadora 10º verde
 {{{  
@@ -103,4 +105,143 @@ Var 1003, name VAR_POS_FLA_20, Value 0
   * Posición flaps full
 {{{
 Var 1004, name VAR_POS_FLA_FU, Value 0    
+}}}
+  * Number of flaps detents
+{{{
+Var 1007, name VAR_NUM_DETENT, Value 0     
+}}}
+
+=== Variables Offsets ===
+  * Los leds serán actualizados cada vez que cambi el estado de laposción de los FLPAS derechos.
+{{{
+Var 0010, name FLAPS_R, Link FSUIPC_INOUT, Offset $0BE4, Length 4     
+{
+  CALL &SUB_FlapsLeds
+}
+}}}
+  * Flaps detent increment. De acuerdo al tipo de avión se definirán los valores de la variable de posición para 10º, 20º y FULL.
+{{{
+Var 0017, name FS_FLA_DET_INC, Link FSUIPC_IN, Offset $3BFA, Length 2
+{
+  L0 = 16383 / &FS_FLA_DET_INC
+  &VAR_NUM_DETENT = L0    
+  &VAR_POS_FLA_10 = 1 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_20 = 2 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_FU = 3 * &FS_FLA_DET_INC
+  IF &VAR_NUM_DETENT = 1
+  {
+    &VAR_POS_FLA_10 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 2
+  {
+    &VAR_POS_FLA_20 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 3
+  {
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 1162889552     // Detecta el piper de AHS
+  {
+    &VAR_POS_FLA_10 = 4095    
+    &VAR_POS_FLA_20 = 10239    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 842346819     // Detecta el avion 152 AHS
+  {
+    &VAR_POS_FLA_10 = 4747    
+    &VAR_POS_FLA_20 = 10332    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  CALL &SUB_FlapsLeds
+}
+}}}
+
+=== Sub rutinas SIOC ===
+  * Maneja los leds ind. de pos. de Flaps
+{{{
+Var 0300, name SUB_FlapsLeds, Link SUBRUTINE    
+{
+  &VAR_DIR_FLAPS = &FLAPS_R - &VAR_OLD_FLAP
+  IF &FLAPS_R = &VAR_POS_FLA_10
+  {
+    &LED_FLAPS_10G = 1    
+    &LED_FLAPS_10R = 0    
+    &LED_FLAPS_20R = 0    
+  }
+  ELSE
+  {
+    IF &FLAPS_R = &VAR_POS_FLA_20
+    {
+      &LED_FLAPS_20G = 1    
+      &LED_FLAPS_20R = 0    
+      &LED_FLAPS_F_R = 0    
+    }
+    ELSE
+    {
+      IF &FLAPS_R = &VAR_POS_FLA_FU
+      {
+        &LED_F_FULL_G = 1    
+        &LED_FLAPS_F_R = 0    
+      }
+      ELSE
+      {
+        &LED_FLAPS_10G = 0    
+        &LED_FLAPS_20G = 0    
+        &LED_F_FULL_G = 0    
+        IF &VAR_DIR_FLAPS > 0
+        {
+          IF &FLAPS_R > &VAR_POS_FLA_20
+          {
+            &LED_FLAPS_F_R = 1    
+          }
+          ELSE
+          {
+            IF &FLAPS_R > &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_20R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R > 0
+              {
+                &LED_FLAPS_10R = 1    
+              }
+            }
+          }
+        }
+        IF &VAR_DIR_FLAPS < 0
+        {
+          IF &FLAPS_R = 0
+          {
+            &LED_FLAPS_10R = 0    
+            &LED_FLAPS_20R = 0    
+            &LED_FLAPS_F_R = 0    
+          }
+          ELSE
+          {
+            IF &FLAPS_R < &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_10R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R < &VAR_POS_FLA_20
+              {
+                &LED_FLAPS_20R = 1    
+              }
+              ELSE
+              {
+                IF &FLAPS_R < &VAR_POS_FLA_FU
+                {
+                  &LED_FLAPS_F_R = 1    
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &VAR_OLD_FLAP = &FLAPS_R    
+}
 }}}
