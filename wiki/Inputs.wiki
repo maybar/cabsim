@@ -56,3 +56,49 @@ Nota: Los pines cuyo elemento esta marcado --- no pueden ser usados, debido al c
 
 = Conexiones del Conector J4=
 https://lh6.googleusercontent.com/-dG7eXLlYiC8/T01Zoenj1JI/AAAAAAAAAeQ/x98Xyv0yLWo/s800/ConectorJ4.jpg
+
+
+En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
+|| *Pin* || *Entrada* || *Elemento Panel* ||
+||1||037||S/C transponder||
+||2||038||Seat Belt||
+||3||040||(free)||
+||4||039||(free)||
+||5||044||---||
+||6||043||---||
+||7||036||(free)||
+||8||042||---||
+||9||041||---||
+||10||GND1|| ||
+||11||046||(free)||
+||12||047||(free)||
+||13||049||(free)||
+||14||048||(free)||
+||15||053||---||
+||16||052||---||
+||17||045||(free)||
+||18||051||---||
+||19||050||---||
+||20||GND2|| ||
+||21||055||(free) ||
+||22||056||(free)||
+||23||058||(free)||
+||24||057||(free)||
+||25||062||---||
+||26||061||---||
+||27||054||(free)||
+||28||060||---||
+||29||059||---||
+||30||GND3|| ||
+||31||064||(free)||
+||32||065||(free)||
+||33||067||(free)||
+||34||066||(free)||
+||35||071||---||
+||36||070||---||
+||37||063||(free)||
+||38||069||---||
+||39||068||---||
+||40||GND4|| ||
+
+Nota: Los pines cuyo elemento esta marcado --- no pueden ser usados, debido al cable paralelo usado para conectar la tarjeta IoCard y el ordenador.
