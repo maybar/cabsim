@@ -6,7 +6,7 @@ Este página muestra las conexiones de las salidas digitales de la Master Card c
 
 
 = Conector J2=
-https://lh6.googleusercontent.com/-7Y_tmMTEVV8/UCpr11nIBLI/AAAAAAAABGM/lZHVVhTB8T8/s288/J2conector.png
+https://lh6.googleusercontent.com/-7Y_tmMTEVV8/UCpr11nIBLI/AAAAAAAABGM/lZHVVhTB8T8/s400/J2conector.png
 
 El cable cinta de este conector esta etiquetado como OUTPUT.
 En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
@@ -47,7 +47,7 @@ En la tabla siguiente se muestran las conexiones de este conector con los elemen
 ||34|| ||(free)||
 ||35|| ||(free)||
 ||36|| ||(free)||
-||37|| ||---||
-||38|| ||---||
-||39|| ||---||
-||40|| || ||
+||37|| ||(free||
+||38|| ||(free||
+||39|| ||(free||
+||40|| ||(free||
