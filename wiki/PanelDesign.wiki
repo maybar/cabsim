@@ -13,3 +13,5 @@ A continuación se listan los pasos para desmontar el panel.
   * Extraer los 2 conectores de cable cinta de en entradas y salidas digitales, de la parte posterior izquierda del panel.
   * Extraer el el conector de entradas digitales, directamente del conector J4 de la tarjeta IOCard.
   * Desconectar los cables que vienen del freno de mano.
+  * Desconectar los cables del cuadrante de gases, en la parte derecha inferior.
+  * Desmontar el Módulo de radios Saitek ubicado en la parte superior derecha, quitando las 4 tuercas de los tornillos de sujeción.
