@@ -5,9 +5,7 @@
 Esta pagina detalla los elementos del panel y como han sido diseñados.
 Además indica como realizar el montaje/desmontaje del panel.
 
-
-= Contenido =
-
+Contenido:
 <wiki:toc max_depth="1" />
 
 = Desmontaje ==
