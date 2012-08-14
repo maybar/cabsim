@@ -8,6 +8,7 @@
       * [Pinout_DB25 Conector DB25]
       * [Inputs Entradas digitales]
       * [Outputs Salidas digitales]
+    * [PanelDesign Panel]
     * [QuadrantDesign Cuadrante de gases]
     * [Schematics Esquemáticos]
     * [Fuente Fuente de alimentación]
