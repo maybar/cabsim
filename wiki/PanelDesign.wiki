@@ -15,3 +15,5 @@ A continuación se listan los pasos para desmontar el panel.
   * Desconectar los cables que vienen del freno de mano.
   * Desconectar los cables del cuadrante de gases, en la parte derecha inferior.
   * Desmontar el Módulo de radios Saitek ubicado en la parte superior derecha, quitando las 4 tuercas de los tornillos de sujeción.
+  * Remover los 8 tornillos de sujeción del panel, sujetando cuidadosamente el panel para no realizar ninguna torsión del mismo. Al retirar el panel tener cuidado de todos los cables estén libres.
+Depositar el panel con la cara frontal hacia abajo sobre una superficie suave.
