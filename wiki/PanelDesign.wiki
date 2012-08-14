@@ -17,7 +17,7 @@ Los pulsadores se han fabricado cortando un cuadrado en metacrilato, y se han su
 Los pulsadores son retroiluminados, mediante una abertura en la parte trasera, encima del eje del pulsador. 
 Los pulsadores han sido pintados por la parte trasera con una capa de pintura blanca para que refleje la luz que entrará por la abertura y encima una capa de pintura negra para minimizar la fuga de luz hacia atrás.
 
-https://lh3.googleusercontent.com/-OngiLMoJ3sU/UCo0oCocqJI/AAAAAAAABFg/vlh293Vfqe0/s288/DSC00262%255B1%255D.JPG
+https://lh3.googleusercontent.com/-OngiLMoJ3sU/UCo0oCocqJI/AAAAAAAABF4/lWlNLHCiIKc/s288/DSC00262%255B1%255D.JPG
 
 = Desmontaje ==
 A continuación se listan los pasos para desmontar el panel.
