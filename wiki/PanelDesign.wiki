@@ -13,6 +13,7 @@ Se ha fabricado usando 2 pulsadores y 2 leds verdes de 3mm, sujetos en una placa
 
 Los pulsadores se han fabricado cortando un cuadrado en metacrilato, y se han sujetado a los ejes de los pulsadores con pegamento fuerte.
 Los pulsadores son retroiluminados, mediante una abertura en la parte trasera, encima del eje del pulsador. 
+Los pulsadores han sido pintados por la parte trasera con una capa de pintura blanca para que refleje la luz que entrará por la abertura y encima una capa de pintura negra para minimizar la fuga de luz hacia atrás.
 
 = Desmontaje ==
 A continuación se listan los pasos para desmontar el panel.
