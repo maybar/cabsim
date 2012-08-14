@@ -10,10 +10,11 @@ Contenido:
 
 = Desmontaje ==
 A continuación se listan los pasos para desmontar el panel.
+  * Para retirar el panel es recomendable separar el modulo de asiento del modulo de instrumentos, para esto levante el módulo de siento y tire hacia atrás.
   * Extraer los 2 conectores de cable cinta de en entradas y salidas digitales, de la parte posterior izquierda del panel.
   * Extraer el el conector de entradas digitales, directamente del conector J4 de la tarjeta IOCard.
   * Desconectar los cables que vienen del freno de mano.
   * Desconectar los cables del cuadrante de gases, en la parte derecha inferior.
   * Desmontar el Módulo de radios Saitek ubicado en la parte superior derecha, quitando las 4 tuercas de los tornillos de sujeción.
-  * Remover los 8 tornillos de sujeción del panel, sujetando cuidadosamente el panel para no realizar ninguna torsión del mismo. Al retirar el panel tener cuidado de todos los cables estén libres.
+  * Remover los 8 tornillos de sujeción del panel, sujetando cuidadosamente el panel para no realizar ninguna torsión del mismo. Al retirar el panel tener cuidado de todos los cables estén libres. Levantar ligeramente el panel para que no toque con los mandos.
 Depositar el panel con la cara frontal hacia abajo sobre una superficie suave.
