@@ -10,7 +10,7 @@ Contenido:
 
 = Desmontaje ==
 A continuación se listan los pasos para desmontar el panel.
-  * Para retirar el panel es recomendable separar el modulo de asiento del modulo de instrumentos, para esto levante el módulo de siento y tire hacia atrás.
+  * Para retirar el panel es recomendable separar el modulo de asiento del modulo de instrumentos, para esto levante el módulo de asiento y tire hacia atrás.
   * Extraer los 2 conectores de cable cinta de en entradas y salidas digitales, de la parte posterior izquierda del panel.
   * Extraer el el conector de entradas digitales, directamente del conector J4 de la tarjeta IOCard.
   * Desconectar los cables que vienen del freno de mano.
