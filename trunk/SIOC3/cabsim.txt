@@ -1,0 +1,611 @@
+// *****************************************************************************
+// * Config_SIOC ver 3.7B1   -     By Manolo Vélez    -    www.opencockpits.com
+// *****************************************************************************
+// * FileName : cabsim.txt
+// * Date : 15/08/2012
+
+
+
+Var 0000, name INIT, Value 0     // Initialisation
+{
+  &FS_STARTER1 = 0    
+  &FS_AVIONIC = 0    
+  &FS_BATTERY = 0    
+  &LED_FLAPS_10R = 0    
+  &LED_FLAPS_10G = 0    
+  CALL &SUB_OFF_WARN
+}
+
+Var 0300, name SUB_FlapsLeds, Link SUBRUTINE     // Maneja los leds ind. de pos. de Flaps
+{
+  &VAR_DIR_FLAPS = &FLAPS_R - &VAR_OLD_FLAP
+  IF &FLAPS_R = &VAR_POS_FLA_10
+  {
+    &LED_FLAPS_10G = 1    
+    &LED_FLAPS_10R = 0    
+    &LED_FLAPS_20R = 0    
+  }
+  ELSE
+  {
+    IF &FLAPS_R = &VAR_POS_FLA_20
+    {
+      &LED_FLAPS_20G = 1    
+      &LED_FLAPS_20R = 0    
+      &LED_FLAPS_F_R = 0    
+    }
+    ELSE
+    {
+      IF &FLAPS_R = &VAR_POS_FLA_FU
+      {
+        &LED_F_FULL_G = 1    
+        &LED_FLAPS_F_R = 0    
+      }
+      ELSE
+      {
+        &LED_FLAPS_10G = 0    
+        &LED_FLAPS_20G = 0    
+        &LED_F_FULL_G = 0    
+        IF &VAR_DIR_FLAPS > 0
+        {
+          IF &FLAPS_R > &VAR_POS_FLA_20
+          {
+            &LED_FLAPS_F_R = 1    
+          }
+          ELSE
+          {
+            IF &FLAPS_R > &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_20R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R > 0
+              {
+                &LED_FLAPS_10R = 1    
+              }
+            }
+          }
+        }
+        IF &VAR_DIR_FLAPS < 0
+        {
+          IF &FLAPS_R = 0
+          {
+            &LED_FLAPS_10R = 0    
+            &LED_FLAPS_20R = 0    
+            &LED_FLAPS_F_R = 0    
+          }
+          ELSE
+          {
+            IF &FLAPS_R < &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_10R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R < &VAR_POS_FLA_20
+              {
+                &LED_FLAPS_20R = 1    
+              }
+              ELSE
+              {
+                IF &FLAPS_R < &VAR_POS_FLA_FU
+                {
+                  &LED_FLAPS_F_R = 1    
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &VAR_OLD_FLAP = &FLAPS_R    
+}
+
+Var 0301, name SUB_CHECKLOAD, Link SUBRUTINE     // Comprueba la carga
+{
+  IF &FS_BAT_LOAD < 0
+  {
+    IF &SW_BAT = 1
+    {
+      &LED_VOLTS = 1    
+    }
+  }
+  ELSE
+  {
+    &LED_VOLTS = 0    
+  }
+}
+
+Var 0302, name SUB_CHECKOILPR, Link SUBRUTINE     // Compruba l apresion de aceite
+{
+  IF &FS_ENG1_OIL_PR < 5958
+  {
+    IF &SW_BAT = 1
+    {
+      &LED_OIL_PRESS = 1    
+    }
+  }
+  ELSE
+  {
+    &LED_OIL_PRESS = 0    
+  }
+}
+
+Var 0303, name SUB_CHECK_FUEL, Link SUBRUTINE     // Comprueba el nivel de combustible
+{
+  L0 = &FS_FUEL_L_MAIN / 65536
+  IF L0 <= 30.2
+  {
+    IF &SW_BAT = 1
+    {
+      IF &LED_L_FUEL = 0
+      {
+        &VAR_BLINKLFUEL = 40         // Valor de inicio del timer
+        &VAR_BLINKLFUEL = TIMER 1 ,-1 ,25
+      }
+      &LED_LOW_FUEL = 1    
+    }
+  }
+  ELSE
+  {
+    &LED_L_FUEL = 0    
+  }
+  L1 = &FS_FUEL_R_MAIN / 65536
+  IF L1 <= 30.2
+  {
+    IF &SW_BAT = 1
+    {
+      IF &LED_R_FUEL = 0
+      {
+        &VAR_BLINKRFUEL = 40    
+        &VAR_BLINKRFUEL = TIMER 1 ,-1 ,25
+      }
+      &LED_LOW_FUEL = 1    
+    }
+  }
+  ELSE
+  {
+    &LED_R_FUEL = 0    
+  }
+  IF L0 > 30.2
+  {
+    IF L0 > 30.2
+    {
+      &LED_LOW_FUEL = 0    
+    }
+  }
+}
+
+Var 0304, name SUB_OFF_WARN, Link SUBRUTINE     // Apaga la luces de warning
+{
+  &LED_L_FUEL = 0    
+  &LED_LOW_FUEL = 0    
+  &LED_R_FUEL = 0    
+  &LED_VOLTS = 0    
+  &LED_OIL_PRESS = 0    
+  &VAR_BLINKLFUEL = 1    
+  &VAR_BLINKRFUEL = 1    
+  &LED_L_FUEL = 0    
+  &LED_R_FUEL = 0    
+}
+
+Var 0001, name FS_STARTER1, Link FSUIPC_OUT, Offset $0892, Length 2, Value 0     // Arranque
+
+Var 0002, name FS_BATTERY, Link FSUIPC_OUT, Offset $3102, Length 1     // Battery switch
+{
+  CALL &SUB_CHECKOILPR
+  CALL &SUB_CHECKLOAD
+  CALL &SUB_CHECK_FUEL
+  IF &FS_BATTERY = 0
+  {
+    CALL &SUB_OFF_WARN
+  }
+}
+
+Var 0003, name FS_ALTERNATOR, Link FSUIPC_OUT, Offset $3101, Length 1     // Alternador
+
+Var 0004, name FS_AVIONIC, Link FSUIPC_OUT, Offset $3103, Length 1, Value 0     // Offset de avionica
+
+Var 0005, name FS_FUELPUMP, Link FSUIPC_OUT, Offset $3104, Length 1, Value 0     // Offset de la bomba de combustible
+
+Var 0006, name FS_LIGHTS, Link FSUIPC_OUT, Offset $0D0C, Length 2, Value 0     // Offset de las luces
+
+Var 0007, name INNER_MARKER, Link FSUIPC_IN, Offset $0BAC, Length 2     // Luz de baliza interna
+{
+  IF &INNER_MARKER = 1
+  {
+    &LED_INNER = 1    
+  }
+  ELSE
+  {
+    &LED_INNER = 0    
+  }
+}
+
+Var 0008, name MIDDLE_MARKER, Link FSUIPC_IN, Offset $0BAE, Length 2     // Luz de baliza media
+{
+  IF &MIDDLE_MARKER = 1
+  {
+    &LED_MIDDLE = 1    
+  }
+  ELSE
+  {
+    &LED_MIDDLE = 0    
+  }
+}
+
+Var 0009, name OUTER_MARKER, Link FSUIPC_IN, Offset $0BB0, Length 2     // Luz de baliza exterior
+{
+  IF &OUTER_MARKER = 1
+  {
+    &LED_OUTER = 1    
+  }
+  ELSE
+  {
+    &LED_OUTER = 0    
+  }
+}
+
+Var 0010, name FLAPS_R, Link FSUIPC_INOUT, Offset $0BE4, Length 4     // Estado de los flaps
+{
+  CALL &SUB_FlapsLeds
+}
+
+Var 0011, name FS_AIRCRAFT, Link FSUIPC_IN, Offset $3D00, Length 4
+
+Var 0012, name FS_BAT_LOAD, Link FSUIPC_IN, Offset $282C, Length 8, Numbers 0     // BAtery load
+{
+  CALL &SUB_CHECKLOAD
+}
+
+Var 0013, name FS_FUEL_L_MAIN, Link FSUIPC_IN, Offset $0B7C, Length 4     // Nivel de combustible izq. principal.
+{
+  IF &SW_TEST = 0
+  {
+    CALL &SUB_CHECK_FUEL
+  }
+}
+
+Var 0014, name FS_FUEL_R_MAIN, Link FSUIPC_IN, Offset $0B94, Length 4     // Nivel de combustible principal derecho
+{
+  IF &SW_TEST = 0
+  {
+    CALL &SUB_CHECK_FUEL
+  }
+}
+
+Var 0015, name FS_ENG1_OIL_PR, Link FSUIPC_IN, Offset $08BA, Length 2     // Presión de aceite del motor 1
+{
+  IF &SW_TEST = 0
+  {
+    CALL &SUB_CHECKOILPR
+  }
+}
+
+Var 0016, name FS_PARK_BRAKE, Link FSUIPC_INOUT, Offset $0BC8, Length 2     // Freno de aparcamiento
+
+Var 0017, name FS_FLA_DET_INC, Link FSUIPC_IN, Offset $3BFA, Length 2     // Flaps detent increment
+{
+  L0 = 16383 / &FS_FLA_DET_INC
+  &VAR_NUM_DETENT = L0    
+  &VAR_POS_FLA_10 = 1 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_20 = 2 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_FU = 3 * &FS_FLA_DET_INC
+  IF &VAR_NUM_DETENT = 1
+  {
+    &VAR_POS_FLA_10 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 2
+  {
+    &VAR_POS_FLA_20 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 3
+  {
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 1162889552     // Detecta el piper de AHS
+  {
+    &VAR_POS_FLA_10 = 4095    
+    &VAR_POS_FLA_20 = 10239    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 842346819     // Detecta el avion 152 AHS
+  {
+    &VAR_POS_FLA_10 = 4747    
+    &VAR_POS_FLA_20 = 10332    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  CALL &SUB_FlapsLeds
+}
+
+Var 0018, name FS_R_BRAKE, Link FSUIPC_IN, Offset $0BC6, Length 2     // Right toe brake control
+{
+  IF &SW_PARK_BRAKE = 1
+  {
+    &FS_PARK_BRAKE = 32767    
+  }
+}
+
+Var 0019, name FS_L_BRAKE, Link FSUIPC_IN, Offset $0BC4, Length 2     // Left toe brake control
+{
+  IF &SW_PARK_BRAKE = 1
+  {
+    &FS_PARK_BRAKE = 32767    
+  }
+}
+
+Var 0402, name SW_START_OFF, Link IOCARD_SW, Input 28     // Llave de arranque en Off
+{
+  IF &SW_START_OFF = 1
+  {
+    &FS_STARTER1 = 0    
+  }
+}
+
+Var 0403, name SW_START_R, Link IOCARD_SW, Input 29     // llave de arranque en pos. Right
+{
+  IF &SW_START_R = 1
+  {
+    &FS_STARTER1 = 1    
+  }
+}
+
+Var 0404, name SW_START_L, Link IOCARD_SW, Input 30     // llave de arranque en pos. Left
+{
+  IF &SW_START_L = 1
+  {
+    &FS_STARTER1 = 2    
+  }
+}
+
+Var 0405, name SW_START_BOTH, Link IOCARD_SW, Input 31     // llave de arranque en pos. Both
+{
+  IF &SW_START_BOTH = 1
+  {
+    IF &SW_START = 0
+    {
+      &FS_STARTER1 = 3    
+    }
+    ELSE
+    {
+      &FS_STARTER1 = 4    
+    }
+  }
+}
+
+Var 0406, name SW_START, Link IOCARD_SW, Input 27     // Llave de arranque en pos. start
+{
+  IF &SW_START_BOTH = 1
+  {
+    IF &SW_START = 0
+    {
+      &FS_STARTER1 = 3    
+    }
+    ELSE
+    {
+      &FS_STARTER1 = 4    
+    }
+  }
+}
+
+Var 0411, name SW_BAT, Link IOCARD_SW, Input 20     // Entrada digital del SW de batería
+{
+  IF &SW_BAT = 0
+  {
+    &FS_BATTERY = 0    
+  }
+  ELSE
+  {
+    &FS_BATTERY = 1    
+  }
+}
+
+Var 0421, name SW_ALT, Link IOCARD_SW, Input 19     // Interruptor del alternador
+{
+  IF &SW_ALT = 0
+  {
+    &FS_ALTERNATOR = 0    
+  }
+  ELSE
+  {
+    &FS_ALTERNATOR = 1    
+  }
+}
+
+Var 0431, name SW_AVIONICS, Link IOCARD_SW, Input 22     // Interruptor de avionica
+{
+  IF &SW_AVIONICS = 0
+  {
+    &FS_AVIONIC = 0    
+  }
+  ELSE
+  {
+    &FS_AVIONIC = 1    
+  }
+}
+
+Var 0441, name SW_FUEL_PUMP, Link IOCARD_SW, Input 1     // Interruptor de bomba de combustible
+{
+  IF &SW_FUEL_PUMP = 0
+  {
+    &FS_FUELPUMP = 0    
+  }
+  ELSE
+  {
+    &FS_FUELPUMP = 1    
+  }
+}
+
+Var 0451, name SW_STRB, Link IOCARD_SW, Input 2     // Interruptor de luces estroboscópicas
+{
+  IF &SW_STRB = 1
+  {
+    &FS_LIGHTS = SETBIT 4
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 4
+  }
+}
+
+Var 0452, name SW_BCN, Link IOCARD_SW, Input 4     // Interruptor de luces beacon
+{
+  IF &SW_BCN = 1
+  {
+    &FS_LIGHTS = SETBIT 1
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 1
+  }
+}
+
+Var 0453, name SW_NAV, Link IOCARD_SW, Input 3     // Interruptor de luces de navegación
+{
+  IF &SW_NAV = 1
+  {
+    &FS_LIGHTS = SETBIT 0
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 0
+  }
+}
+
+Var 0454, name SW_PANEL, Link IOCARD_SW, Input 0     // Interruptor de luces del panel
+{
+  IF &SW_PANEL = 1
+  {
+    &FS_LIGHTS = SETBIT 5
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 5
+  }
+}
+
+Var 0455, name SW_TAXI, Link IOCARD_SW, Input 10     // Interruptor de luces de taxeo
+{
+  IF &SW_TAXI = 1
+  {
+    &FS_LIGHTS = SETBIT 3
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 3
+  }
+}
+
+Var 0456, name SW_LDG, Link IOCARD_SW, Input 11     // Interruptor de luces de aterrizaje
+{
+  IF &SW_LDG = 1
+  {
+    &FS_LIGHTS = SETBIT 2
+  }
+  ELSE
+  {
+    &FS_LIGHTS = CLEARBIT 2
+  }
+}
+
+Var 0457, name SW_TEST, Link IOCARD_SW, Input 9     // Pulsador de test de anunciadores
+{
+  IF &SW_TEST = 1
+  {
+    &LED_L_FUEL = 1    
+    &LED_R_FUEL = 1    
+    &LED_VOLTS = 1    
+    &LED_LOW_FUEL = 1    
+    &LED_OIL_PRESS = 1    
+  }
+  ELSE
+  {
+    &LED_L_FUEL = 0    
+    &LED_R_FUEL = 0    
+    &LED_LOW_FUEL = 0    
+    &LED_VOLTS = 0    
+    &LED_OIL_PRESS = 0    
+    CALL &SUB_CHECK_FUEL
+    CALL &SUB_CHECKLOAD
+    CALL &SUB_CHECKOILPR
+  }
+}
+
+Var 0458, name SW_PARK_BRAKE, Link IOCARD_SW, Input 18     // Interruptor de freno de mano
+{
+  IF &SW_PARK_BRAKE = 1
+  {
+    &FS_PARK_BRAKE = 32767    
+  }
+  ELSE
+  {
+    &FS_PARK_BRAKE = 0    
+  }
+}
+
+Var 0700, name LED_INNER, Link IOCARD_OUT, Output 12     // Led de marcador interno
+
+Var 0701, name LED_MIDDLE, Link IOCARD_OUT, Output 13     // Led de marcador medio
+
+Var 0702, name LED_OUTER, Link IOCARD_OUT, Output 11     // Led de marcador exterior
+
+Var 0703, name LED_FLAPS_10G, Link IOCARD_OUT, Output 20     // Luz indicadora 10º verde
+
+Var 0704, name LED_FLAPS_20G, Link IOCARD_OUT, Output 18     // Luz indicadora 20º verde
+
+Var 0705, name LED_F_FULL_G, Link IOCARD_OUT, Output 16     // Luz indicadora FULL verde
+
+Var 0706, name LED_FLAPS_10R, Link IOCARD_OUT, Output 19     // Luz indicadora 10º roja
+
+Var 0707, name LED_FLAPS_20R, Link IOCARD_OUT, Output 17     // Luz indicadora 20º rojo
+
+Var 0708, name LED_FLAPS_F_R, Link IOCARD_OUT, Output 15     // Luz indicadora FULL roja
+
+Var 0709, name LED_L_FUEL, Link IOCARD_OUT, Output 23     // Indicador de nivel bajo izq. (Combustib)
+
+Var 0710, name LED_R_FUEL, Link IOCARD_OUT, Output 25     // Indicador de nivel bajo der. (Combustib)
+
+Var 0711, name LED_VOLTS, Link IOCARD_OUT, Output 28     // Indicador de alternador desactivado
+
+Var 0712, name LED_OIL_PRESS, Link IOCARD_OUT, Output 27     // Indicador de baja presión de aceite
+
+Var 0713, name LED_LOW_FUEL, Link IOCARD_OUT, Output 22     // Indicador de combustible bajo
+
+Var 1000, name VAR_OLD_FLAP, Value 0     // Guarda la ultima posición
+
+Var 1001, name VAR_DIR_FLAPS, Value 0     // Sentido en el que se mueven los flaps
+
+Var 1002, name VAR_POS_FLA_10, Value 0     // Posición de flaps 10º
+
+Var 1003, name VAR_POS_FLA_20, Value 0     // Posición flaps 20º
+
+Var 1004, name VAR_POS_FLA_FU, Value 0     // Posición flaps full
+
+Var 1005, name VAR_BLINKRFUEL     // Destella el led de combustible der.
+{
+  L0 = MOD &VAR_BLINKRFUEL ,2
+  IF L0 = 0
+  {
+    &LED_R_FUEL = 0    
+  }
+  ELSE
+  {
+    &LED_R_FUEL = 1    
+  }
+}
+
+Var 1006, name VAR_BLINKLFUEL     // Destella el led de combustible izq.
+{
+  L0 = MOD &VAR_BLINKLFUEL ,2
+  IF L0 = 0
+  {
+    &LED_L_FUEL = 0    
+  }
+  ELSE
+  {
+    &LED_L_FUEL = 1    
+  }
+}
+
+Var 1007, name VAR_NUM_DETENT, Value 0     // Number of flaps detents
