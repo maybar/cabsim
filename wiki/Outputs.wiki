@@ -13,8 +13,8 @@ En la tabla siguiente se muestran las conexiones de este conector con los elemen
 || *Pin* || *Entrada* || *Elemento Panel* ||
 ||1||5V|| ||
 ||2||GND||Tierra||
-||3||12||BEACON I||
-||4||11||BEACON O||
+||3||11||BEACON O||
+||4||12||BEACON I||
 ||5||13||BEACON M||
 ||6||14||CTRL LIGHTS||
 ||7||15||FLAPS FULL RED||
