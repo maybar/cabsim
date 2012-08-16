@@ -2,7 +2,7 @@
 
 = Introducción =
 
-Esta página describe los de pasos que debemos seguir para poner en marcha la cabina de simulacion "CabSim".
+Esta página describe los de pasos que debemos seguir para poner en marcha la cabina de simulacion "[http://code.google.com/p/cabsim/wiki/cabsim CabSim ]".
 
 Lista de procedimientos.
 <wiki:toc max_depth="1" />
