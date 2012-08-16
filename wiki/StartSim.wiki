@@ -8,7 +8,7 @@ Lista de procedimientos.
 <wiki:toc max_depth="1" />
 
 
-= Arranque de TeamSpeak =
+= Arranque de [http://www.teamspeak.com/ TeamSpeak] =
 El TeamSpeak es el programa cliente que permite comunicar con otros pilotos o con los controladores de vuelo.
  * Doble click en el icóno del TeamSpeak.
  * Conectar en la red AirHispania.
