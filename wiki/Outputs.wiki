@@ -23,16 +23,16 @@ En la tabla siguiente se muestran las conexiones de este conector con los elemen
 ||10||18||FLAPS 20º GREEN||
 ||11||019||FLAPS 10º RED||
 ||12||020||FLAPS 10º GREEN||
-||13||013||PITOT HEAD Sw||
-||14|| ||S/C  indicator||
-||15|| ||Seat belt indicator||
-||16|| ||(free)||
-||17|| ||(free)||
-||18|| ||(free)||
-||19|| ||(free)||
-||20|| ||(free)||
-||21|| ||(free) ||
-||22|| ||(free)||
+||13||021||Warning indicator (free)||
+||14||22||Warning low fuel level||
+||15||23||Warning low fuel level left||
+||16||24||Warning indicator (free)||
+||17||25||Warning low fuel level right||
+||18||26||Warning indicator (free)||
+||19||27||Warnining low oil||
+||20||28||Warning alternator||
+||21||29||Transponder mode indicator: Standby/Charly ||
+||22||30||Seat Belt indicator||
 ||23|| ||(free)||
 ||24|| ||(free)||
 ||25|| ||(free)||
