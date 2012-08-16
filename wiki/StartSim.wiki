@@ -9,9 +9,9 @@ Lista de procedimientos.
 
 
 = Arranque de [http://www.teamspeak.com/ TeamSpeak] =
-El TeamSpeak es el programa cliente que permite comunicar con otros pilotos o con los controladores de vuelo.
- * Doble click en el icóno del TeamSpeak.
- * Conectar en la red AirHispania.
+El [http://www.teamspeak.com/ TeamSpeak] es el programa cliente que permite comunicar con otros pilotos o con los controladores de vuelo.
+ * Doble click en el icóno del [http://www.teamspeak.com/ TeamSpeak].
+ * Conectar en la red [http://www.airhispania.com AirHispania].
  * Entrar en el canal UNICOM.
 Por defecto la tecla _F12_ permite activar el canal de comunicación.
 Cuando la cabina está alimentada, el boton rojo den el lado derecho los mandos del simulador, es usado como boton PTT (Push To Talk).
