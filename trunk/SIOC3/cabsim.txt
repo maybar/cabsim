@@ -2,18 +2,20 @@
 // * Config_SIOC ver 3.7B1   -     By Manolo Vélez    -    www.opencockpits.com
 // *****************************************************************************
 // * FileName : cabsim.txt
-// * Date : 15/08/2012
+// * Date : 20/08/2012
 
 
 
 Var 0000, name INIT, Value 0     // Initialisation
 {
   &FS_STARTER1 = 0    
+  &FS_STARTER2 = 0    
   &FS_AVIONIC = 0    
   &FS_BATTERY = 0    
   &LED_FLAPS_10R = 0    
   &LED_FLAPS_10G = 0    
   CALL &SUB_OFF_WARN
+  CALL &SUB_SEL_ENG     // Comprueba el selector de motor
 }
 
 Var 0300, name SUB_FlapsLeds, Link SUBRUTINE     // Maneja los leds ind. de pos. de Flaps
@@ -190,6 +192,27 @@ Var 0304, name SUB_OFF_WARN, Link SUBRUTINE     // Apaga la luces de warning
   &LED_R_FUEL = 0    
 }
 
+Var 0305, name SUB_SEL_ENG, Link SUBRUTINE     // Comprueba el slector de motor
+{
+  IF &SW_ENG1_SELECT = 1
+  {
+    &FS_ENG_ACT = 1    
+  }
+  ELSE
+  {
+    IF &SW_ENG2_SELECT = 1
+    {
+      &FS_ENG_ACT = 2    
+    }
+    ELSE
+    {
+      &FS_ENG_ACT = 15         // Todos los motores seleccionados
+    }
+  }
+  &VAR_ENG1 = TESTBIT &FS_ENG_ACT ,0
+  &VAR_ENG2 = TESTBIT &FS_ENG_ACT ,1
+}
+
 Var 0001, name FS_STARTER1, Link FSUIPC_OUT, Offset $0892, Length 2, Value 0     // Arranque
 
 Var 0002, name FS_BATTERY, Link FSUIPC_OUT, Offset $3102, Length 1     // Battery switch
@@ -335,11 +358,36 @@ Var 0019, name FS_L_BRAKE, Link FSUIPC_IN, Offset $0BC4, Length 2     // Left to
   }
 }
 
+Var 0020, name XPDR_MODE, Link FSUIPC_INOUT, Offset $7B91, Length 1     // XPDR Mode Sw
+
+Var 0021, name FS_SEAT_BELT, Link FSUIPC_INOUT, Offset $3340, Length 4     // Interrupotr de cinturon de seguridad
+{
+  IF &FS_SEAT_BELT = 1
+  {
+    &LED_SEAT_BELT = CHANGEBITN 0 ,&LED_SEAT_BELT
+  }
+}
+
+Var 0022, name FS_ENG_ACT, Link FSUIPC_INOUT, Offset $0888, Length 1     // Motor activo
+{
+  &VAR_ENG1 = TESTBIT &FS_ENG_ACT ,0
+  &VAR_ENG2 = TESTBIT &FS_ENG_ACT ,1
+}
+
+Var 0023, name FS_STARTER2, Link FSUIPC_OUT, Offset $092A, Length 2, Value 0
+
 Var 0402, name SW_START_OFF, Link IOCARD_SW, Input 28     // Llave de arranque en Off
 {
   IF &SW_START_OFF = 1
   {
-    &FS_STARTER1 = 0    
+    IF &VAR_ENG1 = 1
+    {
+      &FS_STARTER1 = 0    
+    }
+    IF &VAR_ENG2 = 1
+    {
+      &FS_STARTER2 = 0    
+    }
   }
 }
 
@@ -347,7 +395,14 @@ Var 0403, name SW_START_R, Link IOCARD_SW, Input 29     // llave de arranque en 
 {
   IF &SW_START_R = 1
   {
-    &FS_STARTER1 = 1    
+    IF &VAR_ENG1 = 1
+    {
+      &FS_STARTER1 = 1    
+    }
+    IF &VAR_ENG2 = 1
+    {
+      &FS_STARTER2 = 1    
+    }
   }
 }
 
@@ -355,7 +410,14 @@ Var 0404, name SW_START_L, Link IOCARD_SW, Input 30     // llave de arranque en 
 {
   IF &SW_START_L = 1
   {
-    &FS_STARTER1 = 2    
+    IF &VAR_ENG1 = 1
+    {
+      &FS_STARTER1 = 2    
+    }
+    IF &VAR_ENG2 = 1
+    {
+      &FS_STARTER2 = 2    
+    }
   }
 }
 
@@ -365,11 +427,25 @@ Var 0405, name SW_START_BOTH, Link IOCARD_SW, Input 31     // llave de arranque 
   {
     IF &SW_START = 0
     {
-      &FS_STARTER1 = 3    
+      IF &VAR_ENG1 = 1
+      {
+        &FS_STARTER1 = 3    
+      }
+      IF &VAR_ENG2 = 1
+      {
+        &FS_STARTER2 = 3    
+      }
     }
     ELSE
     {
-      &FS_STARTER1 = 4    
+      IF &VAR_ENG1 = 1
+      {
+        &FS_STARTER1 = 4    
+      }
+      IF &VAR_ENG2 = 1
+      {
+        &FS_STARTER2 = 4    
+      }
     }
   }
 }
@@ -380,11 +456,25 @@ Var 0406, name SW_START, Link IOCARD_SW, Input 27     // Llave de arranque en po
   {
     IF &SW_START = 0
     {
-      &FS_STARTER1 = 3    
+      IF &VAR_ENG1 = 1
+      {
+        &FS_STARTER1 = 3    
+      }
+      IF &VAR_ENG2 = 1
+      {
+        &FS_STARTER2 = 3    
+      }
     }
     ELSE
     {
-      &FS_STARTER1 = 4    
+      IF &VAR_ENG1 = 1
+      {
+        &FS_STARTER1 = 4    
+      }
+      IF &VAR_ENG2 = 1
+      {
+        &FS_STARTER2 = 4    
+      }
     }
   }
 }
@@ -544,6 +634,25 @@ Var 0458, name SW_PARK_BRAKE, Link IOCARD_SW, Input 18     // Interruptor de fre
   }
 }
 
+Var 0459, name SW_SC, Link IOCARD_SW, Input 37     // Pulsador de Modo del transponder
+
+Var 0460, name SW_SEAT_BELT, Link IOCARD_SW, Input 38, Type I     // Pulsador de aviso de cienturon de seguri
+{
+  &FO_JoyStick64 = CHANGEBIT 0 ,&SW_SEAT_BELT
+}
+
+Var 0461, name SW_ENG1_SELECT, Link IOCARD_SW, Input 39     // Selector de motor 1
+{
+  CALL &SUB_SEL_ENG
+}
+
+Var 0462, name SW_ENG2_SELECT, Link IOCARD_SW, Input 40     // Selector de motor 2
+{
+  CALL &SUB_SEL_ENG
+}
+
+Var 0024, name FO_JoyStick64, Link FSUIPC_OUT, Offset $3340, Length 4
+
 Var 0700, name LED_INNER, Link IOCARD_OUT, Output 12     // Led de marcador interno
 
 Var 0701, name LED_MIDDLE, Link IOCARD_OUT, Output 13     // Led de marcador medio
@@ -571,6 +680,10 @@ Var 0711, name LED_VOLTS, Link IOCARD_OUT, Output 28     // Indicador de alterna
 Var 0712, name LED_OIL_PRESS, Link IOCARD_OUT, Output 27     // Indicador de baja presión de aceite
 
 Var 0713, name LED_LOW_FUEL, Link IOCARD_OUT, Output 22     // Indicador de combustible bajo
+
+Var 0714, name LED_SC, Link IOCARD_OUT, Output 29     // Indicador de modo transponder
+
+Var 0715, name LED_SEAT_BELT, Link IOCARD_OUT, Output 30     // Indicador de cinturon de seguridad
 
 Var 1000, name VAR_OLD_FLAP, Value 0     // Guarda la ultima posición
 
@@ -609,3 +722,7 @@ Var 1006, name VAR_BLINKLFUEL     // Destella el led de combustible izq.
 }
 
 Var 1007, name VAR_NUM_DETENT, Value 0     // Number of flaps detents
+
+Var 1008, name VAR_ENG1, Value 0
+
+Var 1009, name VAR_ENG2, Value 0
