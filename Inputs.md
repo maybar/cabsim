@@ -1,0 +1,104 @@
+# Introducción #
+
+Se describen la conexiones del conector de entradas digitales () con los elementos del panel.
+
+
+# Conexiones del Conector J3 #
+![https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A27A/s800/ConectorJ3.jpg](https://lh6.googleusercontent.com/-S07ZwgfAN0k/T01ZpPDsOxI/AAAAAAAAAeU/APwzhg5A27A/s800/ConectorJ3.jpg)
+
+El cable cinta de este conector esta etiquetado como INPUT 1.
+En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
+| **Pin** | **Entrada** | **Elemento Panel** |
+|:--------|:------------|:-------------------|
+|1 |001|Fuel Pump Sw|
+|2 |002|STRB Sw|
+|3 |004|BCN Sw|
+|4 |003|NAV Sw|
+|5 |008|---|
+|6 |007|---|
+|7 |000|PANEL SW|
+|8 |006|---|
+|9 |005|---|
+|10|GND1|  |
+|11|010|TAXI Sw|
+|12|011|LDG Sw|
+|13|013|PITOT HEAD Sw|
+|14|012|(free)|
+|15|017|---|
+|16|016|---|
+|17|009|TEST SW|
+|18|015|---|
+|19|014|---|
+|20|GND2|  |
+|21|019|BAT Sw |
+|22|020|ALT Sw|
+|23|022|(free)|
+|24|021|AVIONIC Sw|
+|25|026|---|
+|26|025|---|
+|27|018|PARKING BRAKE SW|
+|28|024|---|
+|29|023|---|
+|30|GND3|  |
+|31|028|Sw OFF|
+|32|029|Sw LEFT|
+|33|031|Sw RIGHT|
+|34|030|Sw BOTH|
+|35|035|---|
+|36|034|---|
+|37|027|Sw START|
+|38|033|---|
+|39|032|---|
+|40|GND4|  |
+
+Nota: Los pines cuyo elemento esta marcado --- no pueden ser usados, debido al cable paralelo usado para conectar la tarjeta IoCard y el ordenador.
+
+# Conexiones del Conector J4 #
+![https://lh6.googleusercontent.com/-dG7eXLlYiC8/T01Zoenj1JI/AAAAAAAAAeQ/x98Xyv0yLWo/s800/ConectorJ4.jpg](https://lh6.googleusercontent.com/-dG7eXLlYiC8/T01Zoenj1JI/AAAAAAAAAeQ/x98Xyv0yLWo/s800/ConectorJ4.jpg)
+
+
+En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
+| **Pin** | **Entrada** | **Elemento Panel** |
+|:--------|:------------|:-------------------|
+|1 |037|S/C transponder Push Button|
+|2 |038|Seat Belt Push Button|
+|3 |040|Engine 1 Selector Sw|
+|4 |039|Engine 2 Selector Sw|
+|5 |044|---|
+|6 |043|---|
+|7 |036|(free)|
+|8 |042|---|
+|9 |041|---|
+|10|GND1|  |
+|11|046|(free)|
+|12|047|(free)|
+|13|049|(free)|
+|14|048|(free)|
+|15|053|---|
+|16|052|---|
+|17|045|(free)|
+|18|051|---|
+|19|050|---|
+|20|GND2|  |
+|21|055|(free) |
+|22|056|(free)|
+|23|058|(free)|
+|24|057|(free)|
+|25|062|---|
+|26|061|---|
+|27|054|(free)|
+|28|060|---|
+|29|059|---|
+|30|GND3|  |
+|31|064|(free)|
+|32|065|(free)|
+|33|067|(free)|
+|34|066|(free)|
+|35|071|---|
+|36|070|---|
+|37|063|(free)|
+|38|069|---|
+|39|068|---|
+|40|GND4|  |
+
+Nota: Los pines cuyo elemento esta marcado --- no pueden ser usados, debido al cable paralelo usado para conectar la tarjeta IoCard y el ordenador.

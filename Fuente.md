@@ -1,0 +1,20 @@
+# Introducción #
+
+Información de la fuente de alimentación de la cabina.
+
+
+# Detalles #
+
+Modelo: LPK9-4P 300W
+
+|Naranja|18A|3.3V|
+|:------|:--|:---|
+|Rojo|20A|5V|
+|Blanco|0.5A|-5v|
+|Amarillo|13A|+12v|
+|Azul|0.8A|-12v|
+|Negro|RETURN|COM|
+|Verde|REMOTE|PS-ON|
+|Gris|PG|PW-OK|
+
+Potencia total en +3.3v & +5v = 140W Max.

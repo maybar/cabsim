@@ -1,0 +1,52 @@
+# Introducción #
+
+Este página muestra las conexiones de las salidas digitales de la Master Card con los elementos del panel.
+
+
+# Conector J2 #
+![https://lh6.googleusercontent.com/-7Y_tmMTEVV8/UCpr11nIBLI/AAAAAAAABGM/lZHVVhTB8T8/s400/J2conector.png](https://lh6.googleusercontent.com/-7Y_tmMTEVV8/UCpr11nIBLI/AAAAAAAABGM/lZHVVhTB8T8/s400/J2conector.png)
+
+El cable cinta de este conector esta etiquetado como OUTPUT.
+En la tabla siguiente se muestran las conexiones de este conector con los elementos del panel.
+| **Pin** | **Entrada** | **Elemento Panel** |
+|:--------|:------------|:-------------------|
+|1 |5V|  |
+|2 |GND|Tierra|
+|3 |11|BEACON O|
+|4 |12|BEACON I|
+|5 |13|BEACON M|
+|6 |14|CTRL LIGHTS|
+|7 |15|FLAPS FULL RED|
+|8 |16|FLAPS FULL GREEN|
+|9 |17|FLAPS 20º RED|
+|10|18|FLAPS 20º GREEN|
+|11|019|FLAPS 10º RED|
+|12|020|FLAPS 10º GREEN|
+|13|021|Warning indicator (free)|
+|14|22|Warning low fuel level|
+|15|23|Warning low fuel level left|
+|16|24|Warning indicator (free)|
+|17|25|Warning low fuel level right|
+|18|26|Warning indicator (free)|
+|19|27|Warnining low oil|
+|20|28|Warning alternator|
+|21|29|Transponder mode indicator: Standby/Charly |
+|22|30|Seat Belt indicator|
+|23|  |(free)|
+|24|  |(free)|
+|25|  |(free)|
+|26|  |(free)|
+|27|  |(free)|
+|28|  |(free)|
+|29|  |(free)|
+|30|  |(free)|
+|31|  |(free)|
+|32|  |(free)|
+|33|  |(free)|
+|34|  |(free)|
+|35|  |(free)|
+|36|  |(free)|
+|37|  |(free|
+|38|  |(free|
+|39|  |(free|
+|40|  |(free|

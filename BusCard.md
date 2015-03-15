@@ -1,0 +1,11 @@
+# Introducción #
+
+Unos de los objetivos del proyecto CABSIM es minimizar el cableado en la fabricación de cabinas caseras. Por esto CABSIM utiliza instrumentos basados en micro controlador que permiten trabajar en forma autónoma, y comunicándose con el PC mediante un bus de comunicaciones. Entre el PC y la cabina se encuentra el subsistema BusCard.
+
+
+# Detalles #
+
+Las características del subsistema BusCard son las siguientes:
+  * Enlace de comunicaciones entre la cabina y el programa del PC (FSCOM).
+  * Comunicación con los elementos de cabina usando el bus RS485.
+  * Control de entradas y salidas digitales controlado una ioCard Master de OpenCockpitshttp://www.opencockpits.com.

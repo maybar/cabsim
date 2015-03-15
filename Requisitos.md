@@ -1,0 +1,64 @@
+# Introducción #
+
+Esta página contiene los requisitos del proyecto.
+Los requisitos deberán estar identificador por un código único.
+El tipo de objeto puede ser requisito (Req) o informativo (Inf)
+
+# Detalles #
+A continuación la relación de  requisitos de el proyecto.
+
+## Generales ##
+|Código|Tipo|Descripción|
+|:------|:---|:-----------|
+|0001|Req|El simulador debe estar compuesto por un panel, un mueble para el ordenador y un asiento. |
+|0002|Req|Se deberá usar como motor de simulación el MS Flight Simulator 2004 (FS2004). |
+
+## Funcionalidad ##
+|Código|Tipo|Descripción|
+|:------|:---|:-----------|
+|0010|Req|El panel y el motor de simulación deberá disponer de las características necesarias correspondientes para la simulación de un avión Cessna 182S. |
+|0020|Req|El simulador deberá será ser conectado a un ordenador donde se ejecutará el motor de simulación. |
+|0030|Req|El panel deberá mostrar la información de cabina y deberá coincidir con los datos del motor de simulación del FS2004. |
+|0040|Req|El accionamiento sobre los controles del panel, deberá actuar sobre el motor de simulación del FS2004. |
+|0050|Req|La velocidad de mínima de refresco del panel deberá ser de 500 ms. |
+
+## Instrumentos ##
+|Código|Tipo|Descripción|
+|:------|:---|:-----------|
+|0100|Req|Luces indicadoras de balizas OMI|
+|0110|Req|
+
+
+## Interruptores del panel ##
+### Magnetos de arranque de motor (4 posiciones) ###
+Debe ser una perilla giratoria de 4 posiciones marcadas como: OFF, R, L, BOTH. En la parte superior de R,L y BOTH debe presentarse el texto MAGNETOS.
+En la parte derecha del selector debe haber un pulsador de encendido de color rojo, cuyo texto sea: START.
+### Interruptores de batería ###
+Dos interruptores de color rojo. En la parte inferior indicar ALT y BAT. En la parte superior lateral de cada interruptor, el texto ON. En la parte superior el texto MASTER.
+### Interruptor principal de aviónica ###
+Un interruptor blanco, En la parte inferior el texto MASTER. En la parte superior lateral el texto ON. En la parte superior AVIONICS.
+### Fuel boost pump switches ###
+### Light switches : BCN, LAND, TAXI, NAV, STROBE ###
+### Pitot heat switch ###
+### Pitch / Trim wheel with status indicator FNDs. ###
+### 3 Axis lever : Throttle, Fuel mixture, Propeller pitch ###
+### Flap lever ###
+### Fuel tank selector ###
+### Landing gear switch with position indicator lights. ###
+
+## GAUGES ON THE PANEL ##
+
+SPEED indicator
+ATTITUDE indicator with position bar setting rotary knob
+ALTIMETER with BARO setting rotary knob
+TURN COORDINATOR
+HEADING indicator with heading bug and gyro rotary knob
+VERTICAL SPEED indicator
+VOR1 indicator with OBS rotary knob
+VOR2 indicator with OBS rotary knob
+ADF indicator with HDG rotary knob
+FUEL gauge
+Manifold pressure gauge
+TACHOMETER
+CLOCK
+GPS with push buttons and rotary knob (GPS500 model)

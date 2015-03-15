@@ -1,0 +1,48 @@
+# Introducción #
+
+Este documento presenta la lista de las variables FSUIPC que estan vinculadas con el proyecto CabSim.
+
+
+# Detalles #
+
+A continuación se presenta la información de las varibles FSUIPC vinculadas al panel de la cabina.
+  * Offset: es el código FSUIPC de la variable.
+
+|Offset|Nombre|Descripción|Tipo|Valores|
+|:-----|:-----|:-----------|:---|:------|
+|3104|FuelPump|Interruptor de bomba de combustible|8bit|0/1|
+|029C|PitotHead|Interruptor del calentador del tubo pitot|16bit|0/1|
+|0B18|VAC|Indicador de vacío|float64|  |
+|0D0C|Luces|Luces:STRB,BCN,NAV,PANEL,TAXI,LDG|16bit|  |
+|282C|AMP|Carga de batería|float64|  |
+|3586|Starter M1|Arrancador del motor 1|  | |
+|3576|Starter M2|Arrancador del motor 2|  | |
+|3101|Master ALT|Interruptor principal del alternador|  | |
+|3102|Master BAT|Interruptor principal de batería|  | |
+|3103|Master AV|Interruptor principal de aviónica|  | |
+|0BC8|Brake parking|Freno de aparcamiento|0:OFF /32767:ON| |
+|0BE4|Flaps right|Indicador de flaps derecho|0:UP /5461:10º/ 10922:20º/ 16383:FULL| |
+|0BE0|Flaps left|Indicador de flaps izquierdo|0:UP/ 5461:10º/ 10922:20º/ 16383:FULL| |
+|08A0|Fuel Flow|Flujo de combustible PPH SSL|  | |
+|08B8|OilTemp|Indicador de Temperatura de aceite|  | |
+|08BA|Oil Pressure|Indicador de presión de aceite|  | |
+|08BE|EGT|Indicador de temperatura de salida de gases|  | |
+|08C0|Mainfold Pressure|Presion en el sistema de inducción|  | |
+|08E8|CHT|Temperatura en la admisión|  | |
+|0918|PPH1|Engine 1 Fuel Flow Pounds per Hour, as floating point double(FLOAT64)|8 |  |
+|09B0|PPH1|Engine 1 Fuel Flow Pounds per Hour, as floating point double(FLOAT64)|8 |  |
+|2400|Prop1 RPM|Indicador de RPM de la helice 1|  | |
+|0B80|Fuel left Main Capacity|Capacidad del tanque de combustible izquierdo|  | |
+|0B98|Fuel right Main Capacity|Capacidad del tanque de combustible derecho|  | |
+|0B7C|Fuel left Main Level %|Nivel del combustible izquierdo|  | |
+|0B94|Fuel right Main Level %|Nivel del combustible derecho|  | |
+|0BAC|Inner Marker|Indicador de marcador interno|  | |
+|0BAE|Middle Marker|Indicador de marcador medio|  | |
+|0BB0|Outer Marker|Indicador de marcador externo|  | |
+|3122|Radio sound select switch|Pulsadores de selección de saonido de radios|  | |
+|0AF8|Fuel tank select|Selector de tanque de combustible|0:OFF/1:BOTH/2:LEFT/3:RIGHT| |
+|0E8C|OAT|Indicador de temperatura de aire exterior|  | |
+|341D|BELT|Interruptor de señal de cinturon de seguridad|3:OFF/3:ON| |
+|0892|START1|Engine 1 Starter switch position (Magnetos)|2 |0=Off, 1=right, 2=Left, 3=Both, 4=Start|
+|092A|START2|Engine 2 Starter switch position (Magnetos)|2 |0=Off, 1=right, 2=Left, 3=Both, 4=Start|
+|0888|ENGINE|Active engine (select) flags.|1 |Bit 0 = Engine 1 selected … Bit 3 =Engine 4 selected|

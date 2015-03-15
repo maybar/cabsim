@@ -1,0 +1,245 @@
+# Introducción #
+
+A continuación de describe el diseño y fabricación del bloque que incluye el cuadrante de gases del panel y los indicadores de posición de flaps.
+
+# Contenido #
+
+
+
+# Ubicación #
+Este módulo está instalado en la parte inferior derecha del panel, debajo del módulo Multipanel de Saitek.
+Esta sujeto a la estructra del simulador mediante 5 tornillos.
+
+# Características #
+Este bloque contiene el cuadrante de palancas de control (gases, RPM y mezcla) y los indicadores luminosos de posición de flaps.
+
+# Cuadrante de gases #
+"CabSim" usa el equipo "Pro Flight Throttle Quadrant" de la empresa [Saitek](http://www.saitek.com). Este equipo tiene 3 palancas que serán usadas para controlar los gases, la RPM y la mezcla de combustible.
+Este cuadrante se conectará al Hub USB integrado del Sistema de mando(Saitek Pro Flight Yoke System).
+
+Referirse al [Manual](http://code.google.com/p/cabsim/downloads/detail?name=Pro%20Flight%20Quadrant_QSG.pdf&can=2&q=) del Quadrante de Saitek para mas información.
+## Sujeción ##
+El cuadrante de saitek está sujeto a la placa de bloque completo, usando 4 tornillos.
+
+## Conexión al FS ##
+Los pulsadores y ejes del cuadrante se asinarán al Simulador configurando directemte la Asignación de controles del menu de configuración de FS9.
+A continuación se describe la configuración usada:
+Tipo de joystick: Saitek Pro Flight Yoke
+Pestaña: Botones y Teclas
+  * Flaps de refrigeración (Apertura incremental): Botón 19
+  * Flaps de refrigeración (Cierre incremental): Botón 20
+
+Pestaña: Eje del Joystick
+  * Eje de la hélice: Rotación X
+  * Eje de la mezcla: Rotación Y
+  * Eje del acelerador: Eje Z
+
+## Serigrafía ##
+La plca de soporte del bloque del quadrante esta eqtiqeuteda con información de cada una de las 3 palancas:
+  * "THROT UP OPN" Para la palanca de la izquierda (Roja).
+  * "PROP UP INCR RPM" Para la palanca central (Azul).
+  * "MIX UP LEAN" Para la palanca de la derecha (Roja)
+Estas letras son retroiluminadas.
+
+# Indicadores de Flaps #
+Se implmentará con 3 leds bicoles para indicar las posiciones de 10º, 20º y posición de FULL flaps.
+La lus roja se usará para indicar que los flaps se encuentran en movimiento, y la luz verde se usa para indicar la posición actual de los flaps.
+## Conexión al FS ##
+La conexión se realizará usando el protocolo SIO y la tarjeta IO Master Card.
+La conexión de los leds a la IO card es como sigue:
+  * Output 20     Luz indicadora 10º verde
+  * Output 18     Luz indicadora 20º verde
+  * Output 16     Luz indicadora FULL verde
+  * Output 19     Luz indicadora 10º roja
+  * Output 17     Luz indicadora 20º rojo
+  * Output 15     Luz indicadora FULL roja
+
+
+## Programación ##
+El programa cabsim.ssi muestra el control de estas luces.
+
+### Variables SIOC enlazadas a IOCARD y variables de trabajo ###
+Las variables necesarias y son las siguientes:
+  * Luz indicadora 10º verde
+```
+Var 0703, name LED_FLAPS_10G, Link IOCARD_OUT, Output 20
+```
+  * Luz indicadora 20º verde
+```
+Var 0704, name LED_FLAPS_20G, Link IOCARD_OUT, Output 18    
+```
+  * Luz indicadora FULL verde
+```
+Var 0705, name LED_F_FULL_G, Link IOCARD_OUT, Output 16     
+```
+  * Luz indicadora 10º roja
+```
+Var 0706, name LED_FLAPS_10R, Link IOCARD_OUT, Output 19
+```
+  * Luz indicadora 20º rojo
+```
+Var 0707, name LED_FLAPS_20R, Link IOCARD_OUT, Output 17       
+```
+  * Luz indicadora FULL roja
+```
+Var 0708, name LED_FLAPS_F_R, Link IOCARD_OUT, Output 15     
+```
+  * Guarda la ultima posición
+```
+Var 1000, name VAR_OLD_FLAP, Value 0     
+```
+  * Sentido en el que se mueven los flaps
+```
+Var 1001, name VAR_DIR_FLAPS, Value 0     
+```
+  * Posición de flaps 10º
+```
+Var 1002, name VAR_POS_FLA_10, Value 0     
+```
+  * Posición flaps 20º
+```
+Var 1003, name VAR_POS_FLA_20, Value 0     
+```
+  * Posición flaps full
+```
+Var 1004, name VAR_POS_FLA_FU, Value 0    
+```
+  * Number of flaps detents
+```
+Var 1007, name VAR_NUM_DETENT, Value 0     
+```
+
+### Variables Offsets ###
+  * Los leds serán actualizados cada vez que cambi el estado de laposción de los FLPAS derechos.
+```
+Var 0010, name FLAPS_R, Link FSUIPC_INOUT, Offset $0BE4, Length 4     
+{
+  CALL &SUB_FlapsLeds
+}
+```
+  * Flaps detent increment. De acuerdo al tipo de avión se definirán los valores de la variable de posición para 10º, 20º y FULL.
+```
+Var 0017, name FS_FLA_DET_INC, Link FSUIPC_IN, Offset $3BFA, Length 2
+{
+  L0 = 16383 / &FS_FLA_DET_INC
+  &VAR_NUM_DETENT = L0    
+  &VAR_POS_FLA_10 = 1 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_20 = 2 * &FS_FLA_DET_INC
+  &VAR_POS_FLA_FU = 3 * &FS_FLA_DET_INC
+  IF &VAR_NUM_DETENT = 1
+  {
+    &VAR_POS_FLA_10 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 2
+  {
+    &VAR_POS_FLA_20 = 16383    
+  }
+  IF &VAR_NUM_DETENT = 3
+  {
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 1162889552     // Detecta el piper de AHS
+  {
+    &VAR_POS_FLA_10 = 4095    
+    &VAR_POS_FLA_20 = 10239    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  IF &FS_AIRCRAFT = 842346819     // Detecta el avion 152 AHS
+  {
+    &VAR_POS_FLA_10 = 4747    
+    &VAR_POS_FLA_20 = 10332    
+    &VAR_POS_FLA_FU = 16383    
+  }
+  CALL &SUB_FlapsLeds
+}
+```
+
+### Sub rutinas SIOC ###
+  * Maneja los leds ind. de pos. de Flaps
+```
+Var 0300, name SUB_FlapsLeds, Link SUBRUTINE    
+{
+  &VAR_DIR_FLAPS = &FLAPS_R - &VAR_OLD_FLAP
+  IF &FLAPS_R = &VAR_POS_FLA_10
+  {
+    &LED_FLAPS_10G = 1    
+    &LED_FLAPS_10R = 0    
+    &LED_FLAPS_20R = 0    
+  }
+  ELSE
+  {
+    IF &FLAPS_R = &VAR_POS_FLA_20
+    {
+      &LED_FLAPS_20G = 1    
+      &LED_FLAPS_20R = 0    
+      &LED_FLAPS_F_R = 0    
+    }
+    ELSE
+    {
+      IF &FLAPS_R = &VAR_POS_FLA_FU
+      {
+        &LED_F_FULL_G = 1    
+        &LED_FLAPS_F_R = 0    
+      }
+      ELSE
+      {
+        &LED_FLAPS_10G = 0    
+        &LED_FLAPS_20G = 0    
+        &LED_F_FULL_G = 0    
+        IF &VAR_DIR_FLAPS > 0
+        {
+          IF &FLAPS_R > &VAR_POS_FLA_20
+          {
+            &LED_FLAPS_F_R = 1    
+          }
+          ELSE
+          {
+            IF &FLAPS_R > &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_20R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R > 0
+              {
+                &LED_FLAPS_10R = 1    
+              }
+            }
+          }
+        }
+        IF &VAR_DIR_FLAPS < 0
+        {
+          IF &FLAPS_R = 0
+          {
+            &LED_FLAPS_10R = 0    
+            &LED_FLAPS_20R = 0    
+            &LED_FLAPS_F_R = 0    
+          }
+          ELSE
+          {
+            IF &FLAPS_R < &VAR_POS_FLA_10
+            {
+              &LED_FLAPS_10R = 1    
+            }
+            ELSE
+            {
+              IF &FLAPS_R < &VAR_POS_FLA_20
+              {
+                &LED_FLAPS_20R = 1    
+              }
+              ELSE
+              {
+                IF &FLAPS_R < &VAR_POS_FLA_FU
+                {
+                  &LED_FLAPS_F_R = 1    
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &VAR_OLD_FLAP = &FLAPS_R    
+}
+```

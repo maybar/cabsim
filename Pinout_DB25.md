@@ -1,0 +1,45 @@
+# Introducción #
+
+Se describe los pines del conector db25.
+La direccion de los pines es referido al lado del PC.
+
+
+|Pin|Nombre|Dir|MasterCard|
+|:--|:-----|:--|:---------|
+|1 |/STROBE|IN|A1|
+|2 |D0|OUT|S0|
+|3 |D1|OUT|S1|
+|4 |D2|OUT|S2|
+|5 |D3|OUT|B1|
+|6 |D4|OUT|B2|
+|7 |D5|OUT|B3|
+|8 |D6|OUT|DATA|
+|9 |D7|   | B4|
+|10|/ACK|IN|A6|
+|11|BUSY|IN|A7|
+|12|PE|IN|A8|
+|13|SEL|IN|A9|
+|14|/AUTOFD|IN|A2|
+|15|/ERROR|IN|A3|
+|16|/INIT|IN|A4|
+|17|/SELIN|IN|A5|
+|18|GND|   |GND|
+|19|GND|   |GND|
+|20|GND|   |GND|
+|21|GND|   |GND|
+|22|GND|   |GND|
+|23|GND|   |GND|
+|24|GND|   |GND|
+|25|GND|   |GND|
+
+## Detalle buses ##
+  * A1-A9 : Pines de entradas digitales (9 entradas).
+  * S0-S2 : Direcciones del latch 74HC259 para controlar 8 salidas. Este bus se conecta a 8 latches 74HC259 (U2-U9).
+  * Data : Es el valor de la salida digital que se esta controlando con los 8 latches.
+  * B1-B3: Direcciones del decodificador U1.
+
+## Detalle chips ##
+  * U1: 74HC154 - Decodificador para seleccionar los 8 latches (U2-U9)
+  * U2: 74HC259 - Latch para controlar el driver 74HC541 (U10).
+  * U3-U9:74HC259 - Lathes para controlar 7 grupos de 8 salidas digitales.
+  * U10: 74HC541 - Driver tri estado para generar 8 lineas de COMMOM para la entradas digitales.

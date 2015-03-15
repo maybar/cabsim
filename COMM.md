@@ -1,0 +1,32 @@
+# Introducción #
+
+Información del diseño y fabricación de módulo de comunicación Radio COMM.
+El costo del instrumento por OpenCockpits es 135 euros.
+Sólo se comprará la cara frontal del instrumento, el resto será de fabricación casera.
+
+
+# Detalles #
+
+## Costo del instrumento ##
+|**Descripción**|**Cantidad**|**Euros**|
+|:---------------|:-----------|:--------|
+|Panel frontal|1 |24|
+|Soporte Display|2 |10|
+|Encoder CTS288|1 |3 |
+|Pulsadores|2 |1 |
+|Display|12|12|
+|  |Total|50|
+
+## Conexión ##
+**Salidas**.
+  * Segmentos 7.
+  * Punto decimal 1.
+  * Seleccion de Display 16.
+
+**Entradas**.
+  * Pulsadores 2.
+  * Encoder 4.
+
+## Componentes ##
+[ULN2003A](http://www.datasheetcatalog.org/datasheet/SGSThomsonMicroelectronics/mXtyyvx.pdf) Seven Darlington Arrays
+[Display 7 segmentos](http://www.andare-ing.com/uploads/digit_HDSP_7403.pdf)

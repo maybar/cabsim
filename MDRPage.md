@@ -1,0 +1,26 @@
+# Introducción #
+
+Esta página contiene la distribución de requisitos por cada subsistema del proyecto
+
+
+# Subsistemas #
+
+El proyecto cabsim está formado por los siguientes subsistemas:
+  * Mueble
+  * Panel
+  * Aplicaciones
+  * Electrónica de control
+  * Bus de comunicaciones.
+
+## Requisitos Aplicaciones ##
+|Código|Tipo|Descripción|
+|:------|:---|:-----------|
+|  |Req|Aplicaciones y herraminetas necesarias en el PC se realizarán usando Visual Studio C++.|
+|  |Req|Para la comunicación con el motor de simulación se usará la dll fsuipc|
+|  |Req|Para la comunicación con las tarjetas IOCard se usará el protocolo IOCP y el lenguaje SIOC.|
+|  |Req|Se usarán las recomendaciones de programación misra c y misrac++|
+
+
+## Requisitos Panel ##
+|Código|Tipo|Descripción|
+|:------|:---|:-----------|

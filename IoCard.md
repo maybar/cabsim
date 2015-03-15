@@ -1,0 +1,18 @@
+Esta página presenta las tarjetas IoCard usadas.
+
+## Master ##
+![http://cabsim.googlecode.com/files/93030026.jpg](http://cabsim.googlecode.com/files/93030026.jpg)
+
+[Tutorial de manejo y montaje](http://www.andare-ing.com/uploads/ANEXO_I_MANUAL_IOCARDS.zip)
+
+[Video del montaje en 3D de la placa](http://www.andare-ing.com/uploads/videos/IOCards%20Master%20DivX.avi).
+
+[OpenCockpits](http://www.opencockpits.com/)
+
+
+## SIOC ##
+Informacion del lenguaje SIOC.
+
+[Tutoriales relacionados con el lenguaje SIOC.](http://www.opencockpits.com/modules.php?name=Downloads&d_op=viewdownload&cid=50)
+
+[IOCard Step by Step](http://docs.google.com/viewer?a=v&q=cache:KdQ0RVB_Q3AJ:www.opencockpits.com/uploads/tutorial_sioc_eng.pdf+sioc+iocard&hl=en&pid=bl&srcid=ADGEESiqa08Fe6WB6k-H99MIkFf6ZdqxI-ahxT2VrusMuJdcVOSKjHUuaTOKLvGNSzMQsS5UmfezdZ-3aM1dJe-ln--QSOA5CbrCyC0xuM_D_RWr27i3DCkqX5pddzymyIM2wfhxiEIU&sig=AHIEtbT0hdeHjlO2FCS1f1SoxrHrVMshiA)
